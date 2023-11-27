@@ -1,0 +1,79 @@
+/api/users/12345 ✅
+/api?type=user&id=12345 ❌
+
+//Use Plural Nouns for Naming For RESTful URI
+
+GET Users -> /api/users ✅
+GET User account -> /api/users/{userId} ✅
+GET User's rights -> /api/users/{userId}/rights ✅
+GET Users -> /api/getAllUsers ❌
+
+
+/api/customers -> represent all customers.
+/api/customers/{id} -> represents specific customer under this resource
+
+
+/api/customers/{id}/orders
+/api/customers/{id}/orders/{order-id}
+
+//Stick to Standard HTTP Methods
+
+POST /users         // Create a new user
+GET /users          // Get all users
+GET /users/{id}     // Get a specific user
+PUT /users/{id}     // Update a specific user
+DELETE /users/{id}  // Delete a specific user
+
+//Never use CRUD function names in URIs
+
+/api/getUsers ❌
+/api/getUserRights ❌
+GET /api/users ✅
+GET /api/users/12345/rights ✅
+
+//Use forward slash (/) to indicate hierarchical relationships
+
+/api/users/{userId}/rights
+/api/customers/{id}/orders
+
+//Use Hyphens (-)
+
+/api/customers/{id}/addresses/{address-id}
+/api/customers/{id}/shipping-addresses/{address-id}
+
+
+//Embrace Query Parameters for Flexibility
+
+GET /users?gender=male&age=25-35&sort=age,desc&page=1&size=10
+
+//Versioning Matters: Be Consistent
+
+// URL versioning
+GET /api/v1/users
+// Header versioning
+GET /api/users
+Accept: application/vnd.example.v1+json
+
+
+//Boost Discoverability with Hypermedia As The Engine Of Application State (HATEOAS)
+
+GET /users/123
+{
+  "id": 123,
+  "name": "John Doe",
+  "links": [
+    {
+      "rel": "self",
+      "href": "/users/123"
+    },
+    {
+      "rel": "edit",
+      "href": "/users/123/edit"
+    },
+    {
+      "rel": "delete",
+      "href": "/users/123"
+    }
+  ]
+}
+
