@@ -1,0 +1,111 @@
+Rule #1: DO use plural nouns for collections
+
+# GOOD
+GET /products              # get all the products
+GET /products/{product_id} # get one product
+
+# BAD
+GET /product/{product_id}
+
+Rule #2: DON'T add unnecessary path segments
+
+# GOOD
+GET /v3/application/listings/{listing_id}
+
+# BAD
+PATCH /v3/application/shops/{shop_id}/listings/{listing_id}
+GET /v3/application/shops/{shop_id}/listings/{listing_id}/properties
+PUT /v3/application/shops/{shop_id}/listings/{listing_id}/properties/{property_id}
+
+GET /shops/{shop_id}/listings              # normal, expected
+GET /shops/{shop_id}/listings/{listing_id} # someone trying to be "consistent"?
+GET /listings/{listing_id}                 # a much better endpoint
+
+# When {option_id} is not globally unique
+GET /listings/{listing_id}/options/{option_id}
+
+
+Rule #3: DON'T return arrays as top level responses
+
+# GOOD
+GET /things returns:
+{ "data": [{ ...thing1...}, { ...thing2...}] }
+
+# BAD
+GET /things returns:
+[{ ...thing1...}, { ...thing2...}]
+
+Rule #4: DON'T return map structures
+
+# BAD
+GET /things returns:
+{
+    "KEY1": { "id": "KEY1", "foo": "bar" },
+    "KEY2": { "id": "KEY2", "foo": "baz" },
+    "KEY3": { "id": "KEY3", "foo": "bat" }
+}
+
+# GOOD (also note application of Rule #4)
+GET /things returns:
+{
+    "data": [
+        { "id": "KEY1", "foo": "bar" },
+        { "id": "KEY2", "foo": "baz" },
+        { "id": "KEY3", "foo": "bat" }
+    ]   
+}
+
+# OpenAPI v3 structure
+{
+    "paths": {
+        "/speakers": {
+            "post": { ...information about the endpoint...}
+        }
+    }
+}
+
+# Proposed OpenAPI v4 structure, which names requests by adding a new 
+# map layer (eg "createSpeaker").
+{
+    "paths": {
+        "/speakers": {
+            "requests": {
+                "createSpeaker": {
+                    "method": "post",
+                    ...rest of the endpoint info...
+                }
+            }
+        }
+    }
+}
+
+# Hypothetical flat array structure, using fields instead of map keys
+{
+    "requests": [
+        {
+            name: "createSpeaker",    // adding this field is nonbreaking
+            path: "/speakers",
+            method: "post",
+            ...etc...
+        }
+    ]
+}
+
+Rule #5: DO use strings for all identifiers
+
+# BAD
+{ "id": 123 }
+
+# GOOD
+{ "id": "123" }
+
+Rule #6: DO use a structured error format
+
+{
+  "message": "You do not have permission to access this resource",
+  "type": "Unauthorized",
+  "types": ["Unauthorized", "Security"],
+  "cause": { ...recurse for nested any exceptions... }
+}
+
+ServiceAlpha -> ServiceBravo -> ServiceCharlie -> ServiceDelta
