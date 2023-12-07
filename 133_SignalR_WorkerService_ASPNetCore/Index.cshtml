@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+    <ul id="messageList"></ul>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.js"></script>
+<script>
+    const connection = new 
+    signalR.HubConnectionBuilder().withUrl("/hubs/stock").configureLogging(signalR.LogLevel.Information).build();
+
+    connection.on("ReceiveStockPrice", (stockName, stockPrice) => {
+        const li = document.createElement("li");
+        li.textContent = `${stockName}: ${stockPrice}`;
+        document.getElementById("messageList").appendChild(li);
+    });
+
+    connection.start()
+        .then(() => {
+            console.log("SignalR connection started successfully.");
+        })
+        .catch((err) => {
+            console.error("Error starting SignalR connection: " + err);
+        });
+
+</script>
