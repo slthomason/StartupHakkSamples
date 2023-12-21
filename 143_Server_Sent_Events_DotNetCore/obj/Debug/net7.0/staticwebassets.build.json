@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "DYfnKcVGsLHt2pW0nEgsOFVQBzkERsycDypuWmmjInw=",
+  "Source": "143_Server_Sent_Events_DotNetCore",
+  "BasePath": "_content/143_Server_Sent_Events_DotNetCore",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

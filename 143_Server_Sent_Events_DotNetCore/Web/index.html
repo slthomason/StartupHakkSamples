@@ -1,0 +1,45 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+</head>
+<body>
+    <div id="app">
+        <h4>Passage:</h4>
+        <p id="passage"></p>
+        <button onclick="generate()" id="generate">Generate</button>
+        <button onclick="reset()" id="reset" disabled>Reset</button>
+    </div>
+
+
+   
+</body>
+<script type="text/javascript">
+    const $ = (selector) => document.getElementById(selector);
+
+    async function generate() {
+        $("passage").innerText = "";
+        $("generate").disabled = true;
+        $("reset").disabled = false;
+
+        const evtSrc = new EventSource("http://localhost:5122/sse");
+
+        evtSrc.onmessage = (evt) => {
+            if (evt.data.trim() === "[END]") {
+                evtSrc.close();
+                $("generate").disabled = false
+                return;
+            }
+
+            $("passage").innerText += ` ${evt.data}`;
+        }
+    }
+
+    function reset() {
+        window.location.reload();
+    }
+</script>
+</html>

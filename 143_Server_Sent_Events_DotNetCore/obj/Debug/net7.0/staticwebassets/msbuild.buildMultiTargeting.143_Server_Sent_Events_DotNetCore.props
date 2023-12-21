@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\143_Server_Sent_Events_DotNetCore.props" />
+</Project>
