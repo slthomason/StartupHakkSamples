@@ -1,0 +1,60 @@
+   // [36 5 - 36 6]
+    IL_0000: nop
+
+    // [37 9 - 37 28]
+    IL_0001: ldarg.0      // person
+    IL_0002: ldnull
+    IL_0003: call         bool Person::op_Equality(class Person, class Person)
+    IL_0008: stloc.0      // V_0
+
+    // [37 29 - 37 77]
+    IL_0009: ldloc.0      // V_0
+    IL_000a: brfalse.s    IL_0017
+    IL_000c: ldstr        "person"
+    IL_0011: newobj       instance void [System.Runtime]System.ArgumentNullException::.ctor(string)
+    IL_0016: throw
+    IL_0017: ldarg.0      // person
+    IL_0018: callvirt     instance string Person::get_GivenName()
+    IL_001d: ldstr        " "
+    IL_0022: ldarg.0      // person
+    IL_0023: callvirt     instance string Person::get_Surname()
+    IL_0028: call         string [System.Runtime]System.String::Concat(string, string, string)
+
+    // [40 5 - 40 6]
+    IL_002d: stloc.1      // V_1
+    IL_002e: br.s         IL_0030
+    IL_0030: ldloc.1      // V_1
+    IL_0031: ret
+Before C# 7.0 if you wanted to be sure the == operator 
+
+
+   // [36 5 - 36 6]
+    IL_0000: nop
+
+    // [37 9 - 37 43]
+    IL_0001: ldarg.0      // person
+    IL_0002: ldnull
+    IL_0003: ceq
+    IL_0005: stloc.0      // V_0
+
+    IL_0006: ldloc.0      // V_0
+    IL_0007: brfalse.s    IL_0014
+
+    // [37 44 - 37 92]
+    IL_0009: ldstr        "person"
+    IL_000e: newobj       instance void [System.Runtime]System.ArgumentNullException::.ctor(string)
+    IL_0013: throw
+
+    // [39 9 - 39 55]
+    IL_0014: ldarg.0      // person
+    IL_0015: callvirt     instance string Person::get_GivenName()
+    IL_001a: ldstr        " "
+    IL_001f: ldarg.0      // person
+    IL_0020: callvirt     instance string Person::get_Surname()
+    IL_0025: call         string [System.Runtime]System.String::Concat(string, string, string)
+    IL_002a: stloc.1      // V_1
+    IL_002b: br.s         IL_002d
+
+    // [40 5 - 40 6]
+    IL_002d: ldloc.1      // V_1
+    IL_002e: ret
