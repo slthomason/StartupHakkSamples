@@ -1,0 +1,11 @@
+"FeatureManagement": {
+    "NewFeatureFlag": true
+},
+
+
+@inject IFeatureManager
+@addTagHelper *, Microsoft.FeatureManagement
+
+<feature name="NewFeatureFlag" requirement="All">
+  <a asp-action="GetCustomerNameForTest">Go to the GetCustomerNameForTest</a>
+</feature>
