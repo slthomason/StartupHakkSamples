@@ -1,0 +1,9 @@
+{
+    "type":"JWT",
+    "alg":"RSA"
+}
+
+{
+    "userId":"868fd4e7-80a5-4b61-b212-1daa41a51936",
+    "email":"example@test.com"
+}
