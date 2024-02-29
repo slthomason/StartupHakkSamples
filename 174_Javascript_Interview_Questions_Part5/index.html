@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AJAX Example</title>
+<script>
+function fetchData() {
+  // Create a new XMLHttpRequest object
+  var xhr = new XMLHttpRequest();
+  
+  // Define the callback function
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      // If the request is successful, update the HTML content
+      document.getElementById("data").innerHTML = xhr.responseText;
+    }
+  };
+  
+  // Open a GET request to the server endpoint
+  xhr.open("GET", "https://api.example.com/data", true);
+  
+  // Send the request
+  xhr.send();
+}
+</script>
+</head>
+<body>
+
+<h1>AJAX Example</h1>
+
+<button onclick="fetchData()">Fetch Data</button>
+
+<div id="data">
+  <!-- Data will be displayed here -->
+</div>
+
+</body>
+</html>
