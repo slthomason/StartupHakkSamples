@@ -1,0 +1,1 @@
+https://medium.com/@jeslurrahman/simplifying-data-transfer-with-dtos-instead-of-using-regular-classes-in-net-core-c-eca0f9cd53f9
