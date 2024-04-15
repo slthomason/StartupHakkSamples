@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Hp\\source\\repos\\DapperCSharp\\DapperCSharp\\DapperCSharp.csproj": {}
+    "C:\\code\\StartupHakkSamples\\185_Dapper_in_CSharp\\DapperCSharp\\DapperCSharp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Hp\\source\\repos\\DapperCSharp\\DapperCSharp\\DapperCSharp.csproj": {
+    "C:\\code\\StartupHakkSamples\\185_Dapper_in_CSharp\\DapperCSharp\\DapperCSharp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Hp\\source\\repos\\DapperCSharp\\DapperCSharp\\DapperCSharp.csproj",
+        "projectUniqueName": "C:\\code\\StartupHakkSamples\\185_Dapper_in_CSharp\\DapperCSharp\\DapperCSharp.csproj",
         "projectName": "DapperCSharp",
-        "projectPath": "C:\\Users\\Hp\\source\\repos\\DapperCSharp\\DapperCSharp\\DapperCSharp.csproj",
-        "packagesPath": "C:\\Users\\Hp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Hp\\source\\repos\\DapperCSharp\\DapperCSharp\\obj\\",
+        "projectPath": "C:\\code\\StartupHakkSamples\\185_Dapper_in_CSharp\\DapperCSharp\\DapperCSharp.csproj",
+        "packagesPath": "C:\\Users\\spenc\\.nuget\\packages\\",
+        "outputPath": "C:\\code\\StartupHakkSamples\\185_Dapper_in_CSharp\\DapperCSharp\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\DevExpress 22.1\\Components\\Offline Packages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\spenc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.1.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\DevExpress 22.1\\Components\\System\\Components\\Packages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -34,6 +39,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -65,7 +75,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
