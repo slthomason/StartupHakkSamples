@@ -1,0 +1,12 @@
+﻿CREATE PROCEDURE GetUserOrdersWithDetails
+    @UserId INT
+AS
+BEGIN
+    SELECT o.Id AS OrderId, o.OrderDate, o.OrderAmount,
+           p.Name AS ProductName, p.Description, p.Specifications, p.ImageLink,
+           u.FirstName, u.LastName, u.Email
+    FROM Orders o
+    INNER JOIN Products p ON o.ProductId = p.Id
+    INNER JOIN Users u ON o.UserId = u.Id
+    WHERE o.UserId = @UserId;
+END

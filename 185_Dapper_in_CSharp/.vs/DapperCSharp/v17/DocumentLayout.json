@@ -1,0 +1,117 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\code\\StartupHakkSamples\\185_Dapper_in_CSharp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8DB2B2ED-A8A6-4F58-BE49-9819311DCC2D}|DapperCSharp\\DapperCSharp.csproj|c:\\code\\startuphakksamples\\185_dapper_in_csharp\\dappercsharp\\orderdataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8DB2B2ED-A8A6-4F58-BE49-9819311DCC2D}|DapperCSharp\\DapperCSharp.csproj|solutionrelative:dappercsharp\\orderdataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8DB2B2ED-A8A6-4F58-BE49-9819311DCC2D}|DapperCSharp\\DapperCSharp.csproj|c:\\code\\startuphakksamples\\185_dapper_in_csharp\\dappercsharp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8DB2B2ED-A8A6-4F58-BE49-9819311DCC2D}|DapperCSharp\\DapperCSharp.csproj|solutionrelative:dappercsharp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8DB2B2ED-A8A6-4F58-BE49-9819311DCC2D}|DapperCSharp\\DapperCSharp.csproj|c:\\code\\startuphakksamples\\185_dapper_in_csharp\\dappercsharp\\textfile1.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{8DB2B2ED-A8A6-4F58-BE49-9819311DCC2D}|DapperCSharp\\DapperCSharp.csproj|solutionrelative:dappercsharp\\textfile1.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8DB2B2ED-A8A6-4F58-BE49-9819311DCC2D}|DapperCSharp\\DapperCSharp.csproj|c:\\code\\startuphakksamples\\185_dapper_in_csharp\\dappercsharp\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8DB2B2ED-A8A6-4F58-BE49-9819311DCC2D}|DapperCSharp\\DapperCSharp.csproj|solutionrelative:dappercsharp\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8DB2B2ED-A8A6-4F58-BE49-9819311DCC2D}|DapperCSharp\\DapperCSharp.csproj|c:\\code\\startuphakksamples\\185_dapper_in_csharp\\dappercsharp\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8DB2B2ED-A8A6-4F58-BE49-9819311DCC2D}|DapperCSharp\\DapperCSharp.csproj|solutionrelative:dappercsharp\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 234,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TextFile1.txt",
+              "DocumentMoniker": "C:\\code\\StartupHakkSamples\\185_Dapper_in_CSharp\\DapperCSharp\\TextFile1.txt",
+              "RelativeDocumentMoniker": "DapperCSharp\\TextFile1.txt",
+              "ToolTip": "C:\\code\\StartupHakkSamples\\185_Dapper_in_CSharp\\DapperCSharp\\TextFile1.txt",
+              "RelativeToolTip": "DapperCSharp\\TextFile1.txt",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-04-29T21:15:36.87Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\code\\StartupHakkSamples\\185_Dapper_in_CSharp\\DapperCSharp\\Program.cs",
+              "RelativeDocumentMoniker": "DapperCSharp\\Program.cs",
+              "ToolTip": "C:\\code\\StartupHakkSamples\\185_Dapper_in_CSharp\\DapperCSharp\\Program.cs",
+              "RelativeToolTip": "DapperCSharp\\Program.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAzwBQAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-29T21:14:46.632Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "OrderDataAccess.cs",
+              "DocumentMoniker": "C:\\code\\StartupHakkSamples\\185_Dapper_in_CSharp\\DapperCSharp\\OrderDataAccess.cs",
+              "RelativeDocumentMoniker": "DapperCSharp\\OrderDataAccess.cs",
+              "ToolTip": "C:\\code\\StartupHakkSamples\\185_Dapper_in_CSharp\\DapperCSharp\\OrderDataAccess.cs",
+              "RelativeToolTip": "DapperCSharp\\OrderDataAccess.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAmwB0AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-29T21:13:02.952Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\code\\StartupHakkSamples\\185_Dapper_in_CSharp\\DapperCSharp\\Product.cs",
+              "RelativeDocumentMoniker": "DapperCSharp\\Product.cs",
+              "ToolTip": "C:\\code\\StartupHakkSamples\\185_Dapper_in_CSharp\\DapperCSharp\\Product.cs",
+              "RelativeToolTip": "DapperCSharp\\Product.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-29T20:59:21.743Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\code\\StartupHakkSamples\\185_Dapper_in_CSharp\\DapperCSharp\\User.cs",
+              "RelativeDocumentMoniker": "DapperCSharp\\User.cs",
+              "ToolTip": "C:\\code\\StartupHakkSamples\\185_Dapper_in_CSharp\\DapperCSharp\\User.cs",
+              "RelativeToolTip": "DapperCSharp\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-29T20:59:11.604Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
