@@ -2,12 +2,18 @@
 using DapperProject;
 using Microsoft.Data.SqlClient;
 
+var sql = 
+    "SELECT o.Id AS OrderId," +
+    "li.Id AS LineItemId, li.OrderId," +
+    "li.Price, li.Currency, li.Quantity " +
+    "FROM Orders o JOIN LineItems " +
+    "li ON li.OrderId = o.Id WHERE o.Id = @OrderId";
+
 using var connection = new SqlConnection();
 
 var ordersDictionary = new Dictionary<long, Order>();
-var sql = "SELECT o.Id AS OrderId,li.Id AS LineItemId, li.OrderId," +
-    " li.Price, li.Currency, li.Quantity FROM Orders o JOIN LineItems " +
-    "li ON li.OrderId = o.Id WHERE o.Id = @OrderId";
+
+var orderId = 123;
 
 await connection.QueryAsync<Order, LineItem, Order>(
     sql,

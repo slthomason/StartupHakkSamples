@@ -7,19 +7,23 @@
       "RelativeMoniker": "D:0:0:{8DB2B2ED-A8A6-4F58-BE49-9819311DCC2D}|DapperCSharp\\DapperCSharp.csproj|solutionrelative:dappercsharp\\orderdataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8DB2B2ED-A8A6-4F58-BE49-9819311DCC2D}|DapperCSharp\\DapperCSharp.csproj|c:\\code\\startuphakksamples\\185_dapper_in_csharp\\dappercsharp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8DB2B2ED-A8A6-4F58-BE49-9819311DCC2D}|DapperCSharp\\DapperCSharp.csproj|C:\\code\\StartupHakkSamples\\185_Dapper_in_CSharp\\dappercsharp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8DB2B2ED-A8A6-4F58-BE49-9819311DCC2D}|DapperCSharp\\DapperCSharp.csproj|solutionrelative:dappercsharp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8DB2B2ED-A8A6-4F58-BE49-9819311DCC2D}|DapperCSharp\\DapperCSharp.csproj|c:\\code\\startuphakksamples\\185_dapper_in_csharp\\dappercsharp\\textfile1.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{8DB2B2ED-A8A6-4F58-BE49-9819311DCC2D}|DapperCSharp\\DapperCSharp.csproj|solutionrelative:dappercsharp\\textfile1.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{8DB2B2ED-A8A6-4F58-BE49-9819311DCC2D}|DapperCSharp\\DapperCSharp.csproj|c:\\code\\startuphakksamples\\185_dapper_in_csharp\\dappercsharp\\getuserorderswithdetails.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{8DB2B2ED-A8A6-4F58-BE49-9819311DCC2D}|DapperCSharp\\DapperCSharp.csproj|solutionrelative:dappercsharp\\getuserorderswithdetails.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8DB2B2ED-A8A6-4F58-BE49-9819311DCC2D}|DapperCSharp\\DapperCSharp.csproj|c:\\code\\startuphakksamples\\185_dapper_in_csharp\\dappercsharp\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8DB2B2ED-A8A6-4F58-BE49-9819311DCC2D}|DapperCSharp\\DapperCSharp.csproj|C:\\code\\StartupHakkSamples\\185_Dapper_in_CSharp\\dappercsharp\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8DB2B2ED-A8A6-4F58-BE49-9819311DCC2D}|DapperCSharp\\DapperCSharp.csproj|solutionrelative:dappercsharp\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8DB2B2ED-A8A6-4F58-BE49-9819311DCC2D}|DapperCSharp\\DapperCSharp.csproj|c:\\code\\startuphakksamples\\185_dapper_in_csharp\\dappercsharp\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8DB2B2ED-A8A6-4F58-BE49-9819311DCC2D}|DapperCSharp\\DapperCSharp.csproj|c:\\code\\startuphakksamples\\185_dapper_in_csharp\\dappercsharp\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8DB2B2ED-A8A6-4F58-BE49-9819311DCC2D}|DapperCSharp\\DapperCSharp.csproj|solutionrelative:dappercsharp\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8DB2B2ED-A8A6-4F58-BE49-9819311DCC2D}|DapperCSharp\\DapperCSharp.csproj|C:\\code\\StartupHakkSamples\\185_Dapper_in_CSharp\\dappercsharp\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8DB2B2ED-A8A6-4F58-BE49-9819311DCC2D}|DapperCSharp\\DapperCSharp.csproj|solutionrelative:dappercsharp\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -30,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 234,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,41 +50,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "TextFile1.txt",
-              "DocumentMoniker": "C:\\code\\StartupHakkSamples\\185_Dapper_in_CSharp\\DapperCSharp\\TextFile1.txt",
-              "RelativeDocumentMoniker": "DapperCSharp\\TextFile1.txt",
-              "ToolTip": "C:\\code\\StartupHakkSamples\\185_Dapper_in_CSharp\\DapperCSharp\\TextFile1.txt",
-              "RelativeToolTip": "DapperCSharp\\TextFile1.txt",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAACAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2024-04-29T21:15:36.87Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\code\\StartupHakkSamples\\185_Dapper_in_CSharp\\DapperCSharp\\Program.cs",
-              "RelativeDocumentMoniker": "DapperCSharp\\Program.cs",
-              "ToolTip": "C:\\code\\StartupHakkSamples\\185_Dapper_in_CSharp\\DapperCSharp\\Program.cs",
-              "RelativeToolTip": "DapperCSharp\\Program.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAzwBQAAAAzAAAA",
+              "DocumentIndex": 4,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\code\\StartupHakkSamples\\185_Dapper_in_CSharp\\DapperCSharp\\Order.cs",
+              "RelativeDocumentMoniker": "DapperCSharp\\Order.cs",
+              "ToolTip": "C:\\code\\StartupHakkSamples\\185_Dapper_in_CSharp\\DapperCSharp\\Order.cs",
+              "RelativeToolTip": "DapperCSharp\\Order.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-29T21:14:46.632Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "OrderDataAccess.cs",
-              "DocumentMoniker": "C:\\code\\StartupHakkSamples\\185_Dapper_in_CSharp\\DapperCSharp\\OrderDataAccess.cs",
-              "RelativeDocumentMoniker": "DapperCSharp\\OrderDataAccess.cs",
-              "ToolTip": "C:\\code\\StartupHakkSamples\\185_Dapper_in_CSharp\\DapperCSharp\\OrderDataAccess.cs",
-              "RelativeToolTip": "DapperCSharp\\OrderDataAccess.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAmwB0AAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-29T21:13:02.952Z",
+              "WhenOpened": "2024-04-29T21:41:37.882Z",
               "EditorCaption": ""
             },
             {
@@ -98,7 +76,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\code\\StartupHakkSamples\\185_Dapper_in_CSharp\\DapperCSharp\\User.cs",
               "RelativeDocumentMoniker": "DapperCSharp\\User.cs",
@@ -107,6 +85,45 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-29T20:59:11.604Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GetUserOrdersWithDetails.txt",
+              "DocumentMoniker": "C:\\code\\StartupHakkSamples\\185_Dapper_in_CSharp\\DapperCSharp\\GetUserOrdersWithDetails.txt",
+              "RelativeDocumentMoniker": "DapperCSharp\\GetUserOrdersWithDetails.txt",
+              "ToolTip": "C:\\code\\StartupHakkSamples\\185_Dapper_in_CSharp\\DapperCSharp\\GetUserOrdersWithDetails.txt",
+              "RelativeToolTip": "DapperCSharp\\GetUserOrdersWithDetails.txt",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-04-29T21:15:36.87Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\code\\StartupHakkSamples\\185_Dapper_in_CSharp\\DapperCSharp\\Program.cs",
+              "RelativeDocumentMoniker": "DapperCSharp\\Program.cs",
+              "ToolTip": "C:\\code\\StartupHakkSamples\\185_Dapper_in_CSharp\\DapperCSharp\\Program.cs",
+              "RelativeToolTip": "DapperCSharp\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAABFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-29T21:14:46.632Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "OrderDataAccess.cs",
+              "DocumentMoniker": "C:\\code\\StartupHakkSamples\\185_Dapper_in_CSharp\\DapperCSharp\\OrderDataAccess.cs",
+              "RelativeDocumentMoniker": "DapperCSharp\\OrderDataAccess.cs",
+              "ToolTip": "C:\\code\\StartupHakkSamples\\185_Dapper_in_CSharp\\DapperCSharp\\OrderDataAccess.cs",
+              "RelativeToolTip": "DapperCSharp\\OrderDataAccess.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAcwCAAAABiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-29T21:13:02.952Z",
               "EditorCaption": ""
             }
           ]

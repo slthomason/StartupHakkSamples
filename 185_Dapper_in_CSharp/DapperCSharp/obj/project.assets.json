@@ -1926,11 +1926,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\code\\StartupHakkSamples\\186_Dapper_Relationship_Mappings\\DapperProject\\DapperProject.csproj",
-      "projectName": "DapperProject",
-      "projectPath": "C:\\code\\StartupHakkSamples\\186_Dapper_Relationship_Mappings\\DapperProject\\DapperProject.csproj",
+      "projectUniqueName": "C:\\code\\StartupHakkSamples\\185_Dapper_in_CSharp\\DapperCSharp\\DapperCSharp.csproj",
+      "projectName": "DapperCSharp",
+      "projectPath": "C:\\code\\StartupHakkSamples\\185_Dapper_in_CSharp\\DapperCSharp\\DapperCSharp.csproj",
       "packagesPath": "C:\\Users\\spenc\\.nuget\\packages\\",
-      "outputPath": "C:\\code\\StartupHakkSamples\\186_Dapper_Relationship_Mappings\\DapperProject\\obj\\",
+      "outputPath": "C:\\code\\StartupHakkSamples\\185_Dapper_in_CSharp\\DapperCSharp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\DevExpress 22.1\\Components\\Offline Packages"

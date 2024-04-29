@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8iIaV1vZS5Z0jdyUsjCyoCZkBEGpgskBypPHXCAvN/Dx6RDx4Qm/5lsq/h+mnmR88fdQioDIrtMsDZ6eqyw5pA==",
+  "dgSpecHash": "j8ZGXgZFTVzugwKY16LZvsQU71Ix9+ZcI8fBXaKPhvGWqBDwSzfvDQM1vd1/3w7Iq6030rBdHwKal15UE6vmLw==",
   "success": true,
-  "projectFilePath": "C:\\code\\StartupHakkSamples\\186_Dapper_Relationship_Mappings\\DapperProject\\DapperProject.csproj",
+  "projectFilePath": "C:\\code\\StartupHakkSamples\\185_Dapper_in_CSharp\\DapperCSharp\\DapperCSharp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\spenc\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\spenc\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
