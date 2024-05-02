@@ -3,7 +3,9 @@
 
 const dayOfYear = (date) => Math.floor((date - new Date(date.getFullYear(), 0, 0)) / (1000 * 60 * 60 * 24))
 
-dayOfYear(new Date()) // 74
+console.log(
+  dayOfYear(new Date()) // 74
+);
 
 
 
@@ -15,8 +17,12 @@ dayOfYear(new Date()) // 74
 
 const randomColor = () => `#${Math.random().toString(16).slice(2, 8).padEnd(6, '0')}`
 
-randomColor() // #9dae4f
-randomColor() // #6ef10e
+console.log(
+  randomColor() // #9dae4f
+);
+console.log(
+  randomColor() // #6ef10e
+);
 
 
 
@@ -24,31 +30,25 @@ randomColor() // #6ef10e
 
 const rgbToHex = (r, g, b) => "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1)
 
-rgbToHex(255, 255, 255)  // '#ffffff'
+console.log(
+  rgbToHex(255, 255, 255)  // '#ffffff'
+);
 
 
 
 
-//4. Clear all cookies
-
-const clearCookies = () => document.cookie.split(';').forEach((c) => (document.cookie = c.replace(/^ +/, '').replace(/=.*/, `=;expires=${new Date().toUTCString()};path=/`)))
-
-
-
-
-//5. Detect dark mode
+//4. Detect dark mode
 const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+console.log(isDarkMode);
 
 
 
-//6. Swap two variables
 
-[foo, bar] = [bar, foo]
-
+//5. Swap two variables
+//[foo, bar] = [bar, foo]
 
 
 //7. pause for a while
-
 const pause = (millis) => new Promise(resolve => setTimeout(resolve, millis))
 const fn = async () => {
   await pause(1000)

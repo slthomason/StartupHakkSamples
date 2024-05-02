@@ -3,7 +3,9 @@
 
 const removeFalsy = (arr) => arr.filter(Boolean)
 
-removeFalsy([0, 'a string', '', NaN, true, 5, undefined, 'another string', false])
+console.log(
+    removeFalsy([0, 'a string', '', NaN, true, 5, undefined, 'another string', false])
+);
 // ['a string', true, 5, 'another string']
 
 
@@ -14,23 +16,26 @@ removeFalsy([0, 'a string', '', NaN, true, 5, undefined, 'another string', false
 //Super simple task that can be solved by using the modulo operator (%).
 
 const isEven = num => num % 2 === 0
-isEven(2) // true
-isEven(1) // false
 
-
+console.log(
+    isEven(2) // true
+);
+console.log(
+    isEven(1) // false
+);
 
 
 
 //3. Get a random integer between two numbers
 //This method is used to get a random integer between two numbers.
-
 const random = (min, max) => Math.floor(Math.random() * (max - min + 1) + min)
 
-random(1, 50) // 25
-random(1, 50) // 34
-
-
-
+console.log(
+    random(1, 50) // 25
+);
+console.log(
+    random(1, 50) // 34
+);
 
 
 //4. Get average value of arguments
@@ -40,13 +45,9 @@ random(1, 50) // 34
 
 const average = (...args) => args.reduce((a, b) => a + b) / args.length;
 
-average(1, 2, 3, 4, 5);   // 3
-
-
-
-
-
-
+console.log(
+    average(1, 2, 3, 4, 5)   // 3
+);
 
 
 //5. Truncate a number to a fixed decimal point
@@ -55,9 +56,12 @@ average(1, 2, 3, 4, 5);   // 3
 
 const round = (n, d) => Number(Math.round(n + "e" + d) + "e-" + d)
 
-round(1.005, 2) //1.01
-round(1.555, 2) //1.56
-
+console.log(
+    round(1.005, 2) //1.01
+);
+console.log(
+    round(1.555, 2) //1.56
+);
 
 
 
@@ -70,4 +74,6 @@ round(1.555, 2) //1.56
 
 const diffDays = (date, otherDate) => Math.ceil(Math.abs(date - otherDate) / (1000 * 60 * 60 * 24));
 
-diffDays(new Date("2021-11-3"), new Date("2022-2-1"))  // 90
+console.log(
+    diffDays(new Date("2020-03-15"), new Date("2024-5-2"))  // 90
+);
