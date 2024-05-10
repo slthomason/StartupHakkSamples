@@ -1,0 +1,22 @@
+﻿@page
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+    <head>
+        <title>Example DotNet API</title>
+    </head>
+    <body>
+        <h1>Example DotNet API</h1>
+        <div>An example API that demonstrates techniques for maintainability, security, and developer UX.</div>
+        <ul>
+            <li>Version: @this.GetType().Assembly.GetName().Version</li>
+            <li>Environment: PRD</li>
+            <li><a href="/swagger">Swagger Documentation</a></li>
+        </ul>
+        <div>(C) 2023 <a href="https://tedspence.com/">Ted Spence</a> - <a href="https://github.com/tspence/example-api">GitHub</a> | <a href="/privacy">Privacy Policy</a> | <a href="/terms">Terms of Use</a></div>
+    </body>
+</html>
