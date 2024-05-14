@@ -7,15 +7,15 @@
       "RelativeMoniker": "D:0:0:{C3681EE0-ECFB-4F9D-9EE9-30639128B1B1}|DapperProject\\DapperProject.csproj|solutionrelative:dapperproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C3681EE0-ECFB-4F9D-9EE9-30639128B1B1}|DapperProject\\DapperProject.csproj|c:\\code\\startuphakksamples\\186_dapper_relationship_mappings\\dapperproject\\lineitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C3681EE0-ECFB-4F9D-9EE9-30639128B1B1}|DapperProject\\DapperProject.csproj|C:\\code\\StartupHakkSamples\\186_Dapper_Relationship_Mappings\\dapperproject\\lineitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C3681EE0-ECFB-4F9D-9EE9-30639128B1B1}|DapperProject\\DapperProject.csproj|solutionrelative:dapperproject\\lineitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C3681EE0-ECFB-4F9D-9EE9-30639128B1B1}|DapperProject\\DapperProject.csproj|c:\\code\\startuphakksamples\\186_dapper_relationship_mappings\\dapperproject\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C3681EE0-ECFB-4F9D-9EE9-30639128B1B1}|DapperProject\\DapperProject.csproj|C:\\code\\StartupHakkSamples\\186_Dapper_Relationship_Mappings\\dapperproject\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C3681EE0-ECFB-4F9D-9EE9-30639128B1B1}|DapperProject\\DapperProject.csproj|solutionrelative:dapperproject\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C3681EE0-ECFB-4F9D-9EE9-30639128B1B1}|DapperProject\\DapperProject.csproj|c:\\code\\startuphakksamples\\186_dapper_relationship_mappings\\dapperproject\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C3681EE0-ECFB-4F9D-9EE9-30639128B1B1}|DapperProject\\DapperProject.csproj|C:\\code\\StartupHakkSamples\\186_Dapper_Relationship_Mappings\\dapperproject\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C3681EE0-ECFB-4F9D-9EE9-30639128B1B1}|DapperProject\\DapperProject.csproj|solutionrelative:dapperproject\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -48,7 +48,7 @@
               "RelativeDocumentMoniker": "DapperProject\\Program.cs",
               "ToolTip": "C:\\code\\StartupHakkSamples\\186_Dapper_Relationship_Mappings\\DapperProject\\Program.cs",
               "RelativeToolTip": "DapperProject\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAABBAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-29T21:59:49.651Z",
               "EditorCaption": ""
