@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Rare Tags</title>
+    <style>
+        del {
+            background-color: lightsalmon;
+        }
+
+        ins {
+            text-decoration: none;
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>1. The abbr tag</h1>
+    <abbr title="Hyper Text Markup Language">HTML</abbr>
+    <h1>2. The q tag</h1>
+    <q>LEARN TO CODE TO START ON THE PATH TO A CAREER WITH 3 MONTHS TRAINING!</q>
+    <h1>3. The s tag</h1>
+    <p>Buy for <s>$200</s> $100</p>
+    <p>The del and ins pair are similar but semantically meant for document updates instead of corrections.</p>
+    <p>My Favorite Programming Language is <del>JavaScript</del> <ins>TypeScript</ins></p>
+    <h1>4. The mark tag</h1>
+    <p>Coding <mark>Beauty</mark> Website</p>
+    <h1>5. The wbr tag</h1>
+    <p>It is a long established fact that a reader <wbr /> will be distracted by the readable content of a page when looking at its layout.
+    </p>
+    <h1>6. The details tag</h1>
+    <details>
+        <summary>Lorem Ipsum</summary>
+        is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+        dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+        specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+        essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem
+        Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of
+        Lorem Ipsum.
+    </details>
+    <h1>7. The optgroup tag</h1>
+    <select name="cars" id="cars">
+        <optgroup label="Swedish Cars">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+        </optgroup>
+        <optgroup label="German Cars">
+            <option value="mercedes">Mercedes</option>
+            <option value="audi">Audi</option>
+        </optgroup>
+    </select>
+    <h1>8. The datalist tag</h1>
+    <label for="browser">Choose your browser from the list:</label>
+    <input list="browsers" name="browser" id="browser">
+
+    <datalist id="browsers">
+        <option value="Edge">
+        <option value="Firefox">
+        <option value="Chrome">
+        <option value="Opera">
+        <option value="Safari">
+    </datalist>
+    <h1>9. The fieldset tag </h1>
+    <form action="">
+        <fieldset>
+          <legend>Personalia:</legend>
+          <label for="fname">First name:</label>
+          <input type="text" id="fname" name="fname"><br><br>
+          <label for="lname">Last name:</label>
+          <input type="text" id="lname" name="lname"><br><br>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email"><br><br>
+          <label for="birthday">Birthday:</label>
+          <input type="date" id="birthday" name="birthday"><br><br>
+          <input type="submit" value="Submit">
+        </fieldset>
+      </form>
+      <h1>10. The sup and sub tags</h1>
+      <p>This text contains <sup>superscript</sup> text.</p>
+      <p>This text contains <sub>subscript</sub> text.</p>
+
+</body>
+
+</html>
