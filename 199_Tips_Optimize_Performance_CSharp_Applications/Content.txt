@@ -1,1 +1,3 @@
-https://docs.google.com/presentation/d/1mtzXHV7x6_t1ufohNJFGraFzu6_z0Kl1p5j70hzLECA/edit#slide=id.p
+Reference: https://blog.devgenius.io/practical-tips-for-optimizing-performance-in-c-applications-1b09c3dc0c51
+
+Google Slide: https://docs.google.com/presentation/d/1mtzXHV7x6_t1ufohNJFGraFzu6_z0Kl1p5j70hzLECA/edit#slide=id.p

@@ -1,0 +1,3 @@
+Reference: https://blog.devgenius.io/optimizing-mssql-top-5-techniques-10ab574bb4b9
+
+Google Slide: https://docs.google.com/presentation/d/1ynccFvBqJgTTkbLz2wYdqqNDMy3s8IRymVgsNk4Yelo/edit?usp=sharing
