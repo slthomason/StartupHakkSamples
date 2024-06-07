@@ -1,0 +1,3 @@
+Referance: https://medium.com/@kmorpex/understanding-memory-management-in-c-with-stack-and-heap-b79f14569433
+
+Google Slide: https://docs.google.com/presentation/d/1EXq89JJfFIOZ8bUQqvJyCJXuWTplyoUluFVsj9qAKUk/edit#slide=id.g2e372f5a048_2_75

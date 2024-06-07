@@ -1,0 +1,3 @@
+Reference: https://medium.com/@kmorpex/7-clever-async-tips-for-c-net-ninjas-223b8cefd120
+
+Google Slide: https://docs.google.com/presentation/d/1ohLcXs2rUOVE73g6udjL-xdv5qIXCIzV5-mjTxn_XYo/edit?usp=sharing
