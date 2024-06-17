@@ -1,0 +1,355 @@
+/*
+ * JsonTree.js Library v1.1.1
+ *
+ * Copyright 2024 Bunoon
+ * Released under the MIT License
+ */
+ 
+
+@import "foundation/styles";
+
+:root {
+    // Fonts
+    --json-tree-js-default-font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --json-tree-js-text-bold-weight: 400;
+    --json-tree-js-header-bold-weight: 900;
+    --json-tree-js-title-bold-weight: var(--json-tree-js-header-bold-weight);
+    --json-tree-js-text-bold-weight-active: var(--json-tree-js-header-bold-weight);
+
+    // Colors
+    --json-tree-js-color-black: #3b3a3a;
+    --json-tree-js-color-white: #F5F5F5;
+    --json-tree-js-color-snow-white: #F5F5F5;
+
+    // Colors - Types
+    --json-tree-js-color-boolean: #FF0000;
+    --json-tree-js-color-decimal: #e3c868;
+    --json-tree-js-color-number: #666bf9;
+    --json-tree-js-color-string: #78b13f;
+    --json-tree-js-color-date: #a656f5;
+    --json-tree-js-color-array: #F28C28;
+    --json-tree-js-color-object: #C0C0C0;
+    --json-tree-js-color-null: #BBBBBB;
+    --json-tree-js-color-function: var(--json-tree-js-color-null);
+    --json-tree-js-color-unknown: var(--json-tree-js-color-null);
+
+    // Containers
+    --json-tree-js-container-background-color: #22272e;
+    --json-tree-js-container-border-color: #454c56;
+
+    // Button
+    --json-tree-js-button-background-color: #2d333b;
+    --json-tree-js-button-border-color: var(--json-tree-js-container-border-color);
+    --json-tree-js-button-text-color: var(--json-tree-js-color-white);
+    --json-tree-js-button-background-color-hover: var(--json-tree-js-container-border-color);
+    --json-tree-js-button-text-color-hover: var(--json-tree-js-color-snow-white);
+    --json-tree-js-button-background-color-active: #616b79;
+    --json-tree-js-button-text-color-active: var(--json-tree-js-color-snow-white);
+
+    // Borders
+    --json-tree-js-border-radius: 0.5rem;
+    --json-tree-js-border-style-scrollbar: inset 0 0 6px var(--json-tree-js-color-dark-gray);
+    --json-tree-js-border-size: 0.5px;
+
+    // Sizes
+    --json-tree-js-spacing: 10px;
+    --json-tree-js-spacing-font-size: 0.85rem;
+
+    // Transitions
+    --json-tree-js-transition: all .3s;
+}
+
+
+/*
+    -------------------------------------------------------------------------
+    JsonTree.js - Container
+    -------------------------------------------------------------------------
+*/
+
+div.json-tree-js {
+    @include no-selection-allowed;
+    @include box-sizing;
+    font-family: var(--json-tree-js-default-font) !important;
+    display: inline-block;
+    position: relative;
+    border-radius: var(--json-tree-js-border-radius);
+    background-color: var(--json-tree-js-container-background-color);
+    color: var(--json-tree-js-color-white);
+    border: var(--json-tree-js-border-size) solid var(--json-tree-js-container-border-color);
+    padding: var(--json-tree-js-spacing);
+    font-size: var(--json-tree-js-spacing-font-size);
+    font-weight: var(--json-tree-js-text-bold-weight);
+    width: auto;
+    overflow: hidden;
+    margin: 0 !important;
+    
+    div.no-click {
+        pointer-events: none !important;
+    }
+
+    * {
+        @include box-sizing;
+
+        &::before,
+        &::after {
+            @include box-sizing;
+        }
+    }
+}
+
+
+/*
+    -------------------------------------------------------------------------
+    JsonTree.js - Arrows
+    -------------------------------------------------------------------------
+*/
+
+div.json-tree-js {
+    div.no-arrow {
+        display: inline-block;
+        width: 12px;
+        height: 8px;
+        margin-right: calc( var(--json-tree-js-spacing) );
+    }
+
+    div.down-arrow,
+    div.right-arrow {
+        display: inline-block;
+        width: 0;
+        height: 0;
+        margin-right: calc( var(--json-tree-js-spacing) );
+        cursor: pointer;
+        transition: var(--json-tree-js-transition);
+        transition-property: opacity;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    div.down-arrow {
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-top: 8px solid var(--json-tree-js-color-white);
+    }
+
+    div.right-arrow {
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        border-left: 12px solid var(--json-tree-js-color-white);
+    }
+}
+
+
+/*
+    -------------------------------------------------------------------------
+    JsonTree.js - Title Bar
+    -------------------------------------------------------------------------
+*/
+
+div.json-tree-js {
+    div.title-bar {
+        display: flex;
+        margin-bottom: var(--json-tree-js-spacing);
+
+        div.title {
+            text-align: left;
+            width: auto;
+            font-weight: var(--json-tree-js-title-bold-weight);
+            font-size: 1.2rem;
+        }
+
+        div.controls {
+            margin-left: calc( var(--json-tree-js-spacing) * 6 );
+            flex-grow: 1;
+            text-align: right;
+
+            @media (min-width: $minimum-width) { 
+                margin-left: calc( var(--json-tree-js-spacing) * 12 );
+            }
+
+            @include buttons;
+
+            button {
+                margin-left: calc( var(--json-tree-js-spacing) / 2 ) !important;
+            }
+
+            button.copy-all {
+                display: none;
+        
+                @media (min-width: $minimum-width) { 
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}
+
+
+/*
+    -------------------------------------------------------------------------
+    JsonTree.js - Object Type Title
+    -------------------------------------------------------------------------
+*/
+
+div.json-tree-js {
+    div.object-type-title {
+        font-weight: var(--json-tree-js-header-bold-weight);
+        text-align: left !important;
+
+        span.array {
+            color: var(--json-tree-js-color-array);
+        }
+
+        span.object {
+            color: var(--json-tree-js-color-object);
+        }
+
+        span.count {
+            margin-left: calc( var(--json-tree-js-spacing) / 2 );
+            font-weight: var(--json-tree-js-text-bold-weight);
+        }
+    }
+}
+
+/*
+    -------------------------------------------------------------------------
+    JsonTree.js - Object Type Contents
+    -------------------------------------------------------------------------
+*/
+
+div.json-tree-js {
+    div.object-type-contents {
+        margin-top: calc( var(--json-tree-js-spacing) / 2 );
+    }
+}
+
+
+/*
+    -------------------------------------------------------------------------
+    JsonTree.js - Object Type Contents - Values
+    -------------------------------------------------------------------------
+*/
+
+div.json-tree-js {
+    div.object-type-contents {
+        margin-left: calc( var(--json-tree-js-spacing) * 2 );
+        text-align: left !important;
+        
+        div.object-type-value {
+            white-space: nowrap;
+            overflow: hidden;
+            margin-top: calc( var(--json-tree-js-spacing) / 2 );
+            margin-bottom: calc( var(--json-tree-js-spacing) / 2 );
+
+            span.split {
+                margin-left: calc( var(--json-tree-js-spacing) / 2 );
+                margin-right: calc( var(--json-tree-js-spacing) / 2 );
+            }
+
+            span.boolean,
+            span.decimal,
+            span.number,
+            span.string,
+            span.date,
+            span.null,
+            span.function,
+            span.unknown {
+                transition: var(--json-tree-js-transition);
+                transition-property: opacity;
+
+                &:not(.no-hover):hover {
+                    cursor: pointer;
+                    opacity: 0.7;
+                }
+            }
+
+            span.comma {
+                color: var(--json-tree-js-color-white);
+                font-weight: var(--json-tree-js-text-bold-weight);
+            }
+
+            span.boolean {
+                color: var(--json-tree-js-color-boolean);
+            }
+
+            span.decimal {
+                color: var(--json-tree-js-color-decimal);
+            }
+
+            span.number {
+                color: var(--json-tree-js-color-number);
+            }
+
+            span.string {
+                color: var(--json-tree-js-color-string)
+            }
+
+            span.date {
+                color: var(--json-tree-js-color-date)
+            }
+
+            span.array {
+                font-weight: var(--json-tree-js-header-bold-weight);
+                color: var(--json-tree-js-color-array);
+            }
+
+            span.object {
+                font-weight: var(--json-tree-js-header-bold-weight);
+                color: var(--json-tree-js-color-object);
+            }
+
+            span.null {
+                color: var(--json-tree-js-color-null);
+                font-style: italic;
+            }
+
+            span.function {
+                color: var(--json-tree-js-color-function);
+                font-style: italic;
+            }
+
+            span.unknown {
+                color: var(--json-tree-js-color-unknown);
+                font-style: italic;
+            }
+
+            span.count {
+                margin-left: calc( var(--json-tree-js-spacing) / 2 );
+                font-weight: var(--json-tree-js-text-bold-weight);
+            }
+        }
+    }
+}
+
+
+/*
+    -------------------------------------------------------------------------
+    JsonTree.js - Custom Scroll Bar
+    -------------------------------------------------------------------------
+*/
+
+.custom-scroll-bars {
+    &::-webkit-scrollbar {
+        width: 12px;
+    }
+    
+    &::-webkit-scrollbar-track {
+        -webkit-box-shadow: var(--json-tree-js-border-style-scrollbar);
+        box-shadow: var(--json-tree-js-border-style-scrollbar);
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        -webkit-box-shadow: var(--json-tree-js-border-style-scrollbar);
+        box-shadow: var(--json-tree-js-border-style-scrollbar);
+        background: var(--json-tree-js-color-white);
+
+        &:hover {
+            background-color: var(--json-tree-js-color-white);
+        }
+
+        &:active {
+            background-color: var(--json-tree-js-color-lighter-gray);
+        }
+    }
+}
