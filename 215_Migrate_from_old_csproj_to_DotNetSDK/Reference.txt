@@ -1,0 +1,3 @@
+Slides: https://docs.google.com/presentation/d/1Dcv02Q0RW4Z-uTHtkvkCoBtUlVhte0NrKCniAHZgKAg/edit?usp=sharing
+
+Reference: https://mykeels.medium.com/stop-using-the-old-csproj-sdk-format-ae78e0c782bd

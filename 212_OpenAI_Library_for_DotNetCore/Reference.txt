@@ -1,0 +1,3 @@
+Slide: https://docs.google.com/presentation/d/11-8v4Tfq89x7YQ19STIlIR6a6ql5eYbAhGjxFtI1ujE/edit?usp=sharing
+
+Reference: https://www.infoworld.com/article/3715437/openai-unveils-openai-library-for-net.html
