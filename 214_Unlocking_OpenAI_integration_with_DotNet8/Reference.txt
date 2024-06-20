@@ -1,0 +1,3 @@
+Slides: https://docs.google.com/presentation/d/1oW-HkJhsdu_CHZT7f4hIcn9i8zWekKmZx350M41BsZM/edit?usp=sharing
+
+Reference: https://medium.com/c-sharp-progarmming/unlocking-openai-integration-with-net-8-be2755b3ac94

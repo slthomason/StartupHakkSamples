@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+option csharp_namespace = "aspnet_grpc";
+
+package todo;
+
+service ToDoService {
+  rpc AddToDo (AddToDoRequest) returns (AddToDoReply);
+  rpc GetToDos (GetToDosRequest) returns (GetToDosReply);
+  rpc CompleteToDo (CompleteToDoRequest) returns (CompleteToDoReply);
+}
+
+message AddToDoRequest {
+  string description = 1;
+}
+
+message AddToDoReply {
+  string message = 1;
+}
+
+message GetToDosRequest {}
+
+message GetToDosReply {
+  repeated ToDoItem items = 1;
+}
+
+message CompleteToDoRequest {
+  int32 id = 1;
+}
+
+message CompleteToDoReply {
+  string message = 1;
+}
+
+message ToDoItem {
+  int32 id = 1;
+  string description = 2;
+  bool isCompleted = 3;
+}

@@ -1,0 +1,3 @@
+Slides: https://docs.google.com/presentation/d/1_2-ybkOzY_xvx1jh30Rtu9f7gs37W0wo47ZovtjvR_U/edit?usp=sharing
+
+Reference: https://medium.com/@tepes_alexandru/build-an-async-queue-system-using-redis-asp-net-046f1a42bb27

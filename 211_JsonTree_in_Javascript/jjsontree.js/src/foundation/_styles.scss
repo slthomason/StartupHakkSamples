@@ -1,0 +1,47 @@
+$minimum-width: 768px;
+
+@mixin no-selection-allowed {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+@mixin transform( $property ) {
+    -webkit-transform: $property;
+    -ms-transform: $property;
+    transform: $property;
+}
+
+@mixin box-sizing {
+    box-sizing: border-box;
+    line-height: normal;
+}
+
+@mixin buttons {
+    button {
+        background-color: var(--json-tree-js-button-background-color);
+        border: var(--json-tree-js-border-size) solid var(--json-tree-js-button-border-color);
+        color: var(--json-tree-js-button-text-color);
+        border-radius: var(--json-tree-js-border-radius);
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 9px;
+        padding-right: 9px;
+        outline: none;
+        transition: var(--json-tree-js-transition);
+
+        &:not(.active):active {
+            background: var(--json-tree-js-button-background-color-active) !important;
+            color: var(--json-tree-js-button-text-color-active) !important;
+        }
+
+        &:not(.active):hover {
+            cursor: pointer;
+            background: var(--json-tree-js-button-background-color-hover);
+            color: var(--json-tree-js-button-text-color-hover);
+        }
+    }
+}
