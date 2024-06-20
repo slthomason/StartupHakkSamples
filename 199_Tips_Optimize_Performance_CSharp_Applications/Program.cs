@@ -14,6 +14,9 @@ for (int i = 0; i < 1000000; i++)
 }
 string result = sb.ToString();
 
+
+
+
 //Optimize LINQ Queries
 // Inefficient LINQ query
 var result = myList.Where(item => item.SomeProperty == someValue)
@@ -23,6 +26,8 @@ var result = myList.Where(item => item.SomeProperty == someValue)
 // Optimized query
 var result = myList.Where(item => item.SomeProperty == someValue)
                    .ToList();
+
+
 
 
 //Minimize Object Instantiation
@@ -41,12 +46,16 @@ for (int i = 0; i < 1000; i++)
 }
 
 
+
+
 //Avoid Boxing and Unboxing
 // Boxing example
 object boxed = 10; // Boxing occurs here
 
 // Unboxing example
 int unboxed = (int)boxed; // Unboxing occurs here
+
+
 
 
 //Implement Asynchronous Programming
@@ -62,6 +71,9 @@ public async Task DoSomethingAsync()
     // Perform asynchronous operation
 }
 
+
+
+
 //Memory Management
 // Inefficient memory allocation
 byte[] buffer = new byte[1000000]; // Allocates a large buffer unnecessarily
@@ -74,12 +86,17 @@ if (condition)
 }
 
 
+
+
+
 //Use Value Types Where Appropriate
 // Reference type example
 MyClass referenceType = new MyClass();
 
 // Value type example
 int valueType = 10;
+
+
 
 
 //Optimize Loops
@@ -112,6 +129,9 @@ var batchedItems = collection.ToArray();
 InteropMethodBatch(batchedItems);
 
 
+
+
+
 //Optimize Database Access
 // Using MemoryCache to cache frequently accessed data
 MemoryCache cache = new MemoryCache(new MemoryCacheOptions());
@@ -122,6 +142,8 @@ if (!cache.TryGetValue(key, out string cachedData))
     cachedData = GetDataFromSource();
     cache.Set(key, cachedData, TimeSpan.FromMinutes(10)); // Cache data for 10 minutes
 }
+
+
 
 
 //Use Structs for Small Data Structures
@@ -138,6 +160,9 @@ struct Point
     public int X { get; set; }
     public int Y { get; set; }
 }
+
+
+
 
 //Avoid Excessive Exception Handling
 // Excessive exception handling
@@ -159,6 +184,9 @@ catch (SpecificException ex)
 {
     // Handle specific exception
 }
+
+
+
 
 
 //Optimize Resource Usage

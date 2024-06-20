@@ -9,6 +9,8 @@ public class HelloWorld
     }
 }
 
+
+
 //2. Data Types
 
 //Value Types:
@@ -34,6 +36,8 @@ person.LastName = "Doe";
 //c) array
 int[] numbers = new int[] { 1, 2, 3, 4, 5 };
 
+
+
 //3. Variables
 int age = 30; // integer variable
 string name = "John"; // string variable
@@ -44,9 +48,13 @@ bool isLoggedIn = true; // boolean variable
 var number = 5; // compiler infers type as int
 var message = "This is a message"; // compiler infers type as string
 
+
+
 //4. Constants
 const double GRAVITY = 9.81; // constant for gravitational acceleration
 const string COMPANY_NAME = "MyCompany"; // constant company name
+
+
 
 //5. Conditional Statements
 int age = 20;
@@ -60,11 +68,11 @@ else
     Console.WriteLine("You are not eligible to vote.");
 }
 
-switch (variable) { /*...*/ } // Switch statement
+switch (variable) {} // Switch statement
+
 
 
 //6. Loops
-
 for (int i = 1; i <= 5; i++)
 {
     Console.WriteLine(i);
@@ -76,9 +84,13 @@ while (condition) { /*...*/ } // While loop
 
 do { /*...*/ } while (condition); // Do-while loop
 
+
+
 //7. Arrays
 string[] names = new string[3] { "Alice", "Bob", "Charlie" };
 Console.WriteLine(names[1]); // Output: Bob (accessing element at index 1)
+
+
 
 //8. Lists
 List<int> numbers = new List<int>();

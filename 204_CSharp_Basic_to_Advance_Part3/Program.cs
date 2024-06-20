@@ -168,7 +168,6 @@ public static void Main(string[] args)
 //22. Nullables
 int? nullableInt = null; // Nullable integer
 
-
 //23. Attributes & Reflection
 
 public class Person

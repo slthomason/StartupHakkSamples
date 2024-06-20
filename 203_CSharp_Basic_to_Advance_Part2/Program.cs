@@ -21,7 +21,7 @@ public class Program
 {
     public static void Main(string[] args)
     {
-        Rectangle rect = new Rectangle();
+        var rect = new Rectangle();
         rect.Width = 5;
         rect.Height = 10;
 
@@ -32,14 +32,6 @@ public class Program
 
 //11. Classes & Objects
 public class MyClass // Class definition
-{
-    public string PropertyName { get; set; } // Properties store data
-    public void MethodName() { /*...*/ } // Methods define actions
-}
-
-MyClass obj = new MyClass(); // Object creation
-
-//public class MyClass // Class definition
 {
     public string PropertyName { get; set; } // Properties store data
     public void MethodName() { /*...*/ } // Methods define actions
