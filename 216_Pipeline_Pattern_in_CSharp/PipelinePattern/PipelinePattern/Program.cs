@@ -9,7 +9,7 @@ namespace PipelinePattern
         {
             var pipeline = new Pipeline<string>()
                 .AddStep(new Step1())
-            .AddStep(new Step2())
+                .AddStep(new Step2())
                 .AddStep(new Step3());
 
             string input = "hello world";

@@ -1,4 +1,4 @@
-using Aspire.Azure.AI.OpenAI;
+using Aspire.Hosting.Azure;
 
 public class OpenAIService
 {
