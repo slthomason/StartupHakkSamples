@@ -1,6 +1,3 @@
-using ExampleDataLayer;
-using Microsoft.EntityFrameworkCore;
-
 [assembly: System.Reflection.AssemblyVersion("1.0.*")]
 
 namespace ExampleApi
@@ -11,11 +8,8 @@ namespace ExampleApi
         {
             var startup = new Startup();
             var builder = WebApplication.CreateBuilder(args);
-            builder.Services.AddDbContext<BloggingContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
             startup.ConfigureServices(builder.Services);
             var app = builder.Build();
-            
 
             // Note that Swagger should ALWAYS be present on every environment.
             // Do NOT hide swagger on non-development environments.
