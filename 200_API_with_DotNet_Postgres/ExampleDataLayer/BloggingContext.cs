@@ -6,15 +6,16 @@ namespace ExampleDataLayer
 
     public class BloggingContext : DbContext
     {
-        public BloggingContext(DbContextOptions<BloggingContext> options)
-           : base(options)
-        {
-        }
         public DbSet<BlogEntity> Blogs { get; set; }
         public DbSet<PostEntity> Posts { get; set; }
 
-       
+        public BloggingContext()
+        {
+        }
 
-       
+        protected override void OnConfiguring(DbContextOptionsBuilder options)
+        {
+            options.UseNpgsql($"Host=localhost;Port=5432;Username=apiuser;Password=apipassword;");
+        }
     }
 }

@@ -34,5 +34,9 @@ msbuild.wrn
 
 #log files
 *.log
+<<<<<<< HEAD
 200_API_with_DotNet_Postgres/ExampleApi/appsettings.json
+200_API_with_DotNet_Postgres/ExampleApi/appsettings.json
+=======
+>>>>>>> parent of 904b8f7 (Added the dummy db)
 200_API_with_DotNet_Postgres/ExampleApi/appsettings.json

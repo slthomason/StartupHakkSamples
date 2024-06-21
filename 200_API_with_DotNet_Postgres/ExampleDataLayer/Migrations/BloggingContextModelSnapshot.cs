@@ -17,25 +17,16 @@ namespace ExampleDataLayer.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.3")
+                .HasAnnotation("ProductVersion", "7.0.2")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
             modelBuilder.Entity("ExampleDataLayer.Entities.BlogEntity", b =>
                 {
-                    b.Property<long>("BlogId")
+                    b.Property<Guid>("BlogId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("BlogId"));
-
-                    b.Property<string>("Author")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("Description")
-                        .HasColumnType("text");
+                        .HasColumnType("uuid");
 
                     b.Property<string>("Url")
                         .IsRequired()
@@ -48,26 +39,18 @@ namespace ExampleDataLayer.Migrations
 
             modelBuilder.Entity("ExampleDataLayer.Entities.PostEntity", b =>
                 {
-                    b.Property<long>("PostId")
+                    b.Property<Guid>("PostId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
+                        .HasColumnType("uuid");
 
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("PostId"));
+                    b.Property<int>("BlogId")
+                        .HasColumnType("integer");
 
-                    b.Property<long>("BlogId")
-                        .HasColumnType("bigint");
-
-                    b.Property<DateOnly?>("PostedDate")
-                        .HasColumnType("date");
-
-                    b.Property<string>("Summary")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Title")
+                    b.Property<string>("Content")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("Url")
+                    b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("text");
 
