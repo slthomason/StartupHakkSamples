@@ -15,6 +15,7 @@ namespace ExampleBusinessLayer
     {
         private readonly SearchlightEngine _engine;
         private readonly IModelEntityMapper _mapper;
+        private BloggingContext context;
 
         public BusinessLayer(SearchlightEngine engine, IModelEntityMapper mapper) 
         {
@@ -26,7 +27,7 @@ namespace ExampleBusinessLayer
         {
             // Insert entities in database
             var entities = _mapper.GetMapper().Map<List<TModel>, List<TEntity>>(models);
-            await using (var db = new BloggingContext())
+            await using (var db = context)
             {
                 db.Set<TEntity>().AddRange(entities);
                 await db.SaveChangesAsync();
@@ -42,7 +43,7 @@ namespace ExampleBusinessLayer
             var request = new FetchRequest() { filter = filter, include = include, order = order, pageSize = pageSize, pageNumber = pageNumber };
             var source = _engine.FindTable(typeof(TEntity).Name);
             var syntax = source.Parse(request);
-            await using (var db = new BloggingContext())
+            await using (var db = context)
             {
                 return syntax.QueryCollection(db.Set<TEntity>());
             }

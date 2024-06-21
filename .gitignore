@@ -34,3 +34,4 @@ msbuild.wrn
 
 #log files
 *.log
+200_API_with_DotNet_Postgres/ExampleApi/appsettings.json
