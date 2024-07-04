@@ -1,0 +1,3 @@
+Slides: https://docs.google.com/presentation/d/1MWd-soT0YVYtQyIYtGOdVHr20qVu4Orcmdrpc01czk4/edit?usp=sharing
+
+Reference: https://medium.com/@artak.galstyan.73/implementing-the-repository-pattern-with-multiple-databases-in-c-and-net-248a89c43e3a
