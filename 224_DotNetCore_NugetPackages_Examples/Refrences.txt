@@ -1,0 +1,2 @@
+Slides: https://docs.google.com/presentation/d/1Ue3Ozzjtw8qXXIov0vLHwQBL3vkLwKpIbzlQogxjzWY/edit?usp=sharing
+Reference: https://medium.com/@kmorpex/7-nuget-packages-that-every-net-developer-should-know-9c17f709c035
