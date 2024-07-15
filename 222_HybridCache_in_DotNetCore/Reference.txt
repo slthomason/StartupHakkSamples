@@ -1,0 +1,2 @@
+Slides: https://docs.google.com/presentation/d/1wN6kUwkb_s_e13KM2cwMSgGGVfo5zm2qrwOO8lXXGIg/edit?usp=sharing
+Referece: https://medium.com/c-sharp-progarmming/exploring-hybridcache-in-net-9-a-game-changer-for-asp-net-core-applications-5afc321c0690

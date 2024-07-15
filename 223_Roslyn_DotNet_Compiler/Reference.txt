@@ -1,0 +1,2 @@
+Slides: https://docs.google.com/presentation/d/1j9AeTTJj0ZxOP0QyjRWuOYMl0TezHvXNuZtHju6EfO4/edit?usp=sharing
+Reference: https://medium.com/c-sharp-progarmming/understanding-net-compiler-platform-roslyn-analyzers-3033e704b278
