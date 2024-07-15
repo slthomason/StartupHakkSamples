@@ -1,3 +1,6 @@
 Slides: https://docs.google.com/presentation/d/1uQb51Jp_3NNWb-L1DSM7eewP5tZLq55SzI0uKcBU8J4/edit?usp=sharing
 
-Reference: https://blog.cloudflare.com/automatically-replacing-polyfill-io-links-with-cloudflares-mirror-for-a-safer-internet?utm_source=tldrwebdev
+References: 
+https://blog.cloudflare.com/automatically-replacing-polyfill-io-links-with-cloudflares-mirror-for-a-safer-internet?utm_source=tldrwebdev
+
+https://www.theregister.com/2024/06/25/polyfillio_china_crisis/?utm_source=tldrnewsletter
