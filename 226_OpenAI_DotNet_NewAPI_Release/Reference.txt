@@ -1,0 +1,3 @@
+Slides: https://docs.google.com/presentation/d/14KvBdGmqpBeDqGC_TuejQ9US-2HtiI4ipnaJGRxXJMM/edit?usp=sharing
+
+Referece: https://medium.com/@ajidejibola/microsoft-and-openai-official-net-library-for-ai-released-02413321aba0
