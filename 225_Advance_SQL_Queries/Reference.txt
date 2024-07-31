@@ -1,1 +1,3 @@
 Slides: https://docs.google.com/presentation/d/19LiegZJymyLPL3idBH_eUUNeQ_wFuVBBzMmgzOYMDGw/edit?usp=sharing
+
+Reference: https://blog.stackademic.com/9-advanced-sql-queries-for-data-mastery-ce37ae78837e
