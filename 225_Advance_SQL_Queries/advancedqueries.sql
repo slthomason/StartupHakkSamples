@@ -1,4 +1,4 @@
--- Section 1: Subqueries and Joins
+-- Section 1: Subqueries
 
 -- 1.1 Subquery with IN Clause
 -- Example: Selecting employees in departments with specific IDs
@@ -12,13 +12,17 @@ SELECT *
 FROM employees
 WHERE EXISTS (SELECT 1 FROM orders WHERE orders.employee_id = employees.employee_id);
 
--- 1.3 Self-Join for Hierarchy
+
+-- Section 2: Advance Joins
+
 -- Example: Selecting employees and their managers
 SELECT e.employee_name, m.employee_name AS manager_name
 FROM employees e
 JOIN employees m ON e.manager_id = m.employee_id;
 
--- Section 2: Window Functions
+
+
+-- Section 3: Window Functions
 
 -- 2.1 ROW_NUMBER() for Ranking
 -- Example: Ranking employees by salary within each department
@@ -32,6 +36,7 @@ SELECT order_date, total_sales,
        LAG(total_sales) OVER (ORDER BY order_date) AS previous_sales,
        LEAD(total_sales) OVER (ORDER BY order_date) AS next_sales
 FROM orders;
+
 
 -- Section 3: Common Table Expressions (CTEs)
 
@@ -60,6 +65,7 @@ WITH DepartmentAvg AS (
 SELECT e.employee_name, e.salary, d.avg_salary, e.salary - d.avg_salary AS salary_difference
 FROM employees e
 JOIN DepartmentAvg d ON e.department_id = d.department_id;
+
 
 -- Section 4: Advanced Aggregations
 
