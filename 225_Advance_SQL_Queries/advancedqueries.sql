@@ -24,13 +24,13 @@ JOIN employees m ON e.manager_id = m.employee_id;
 
 -- Section 3: Window Functions
 
--- 2.1 ROW_NUMBER() for Ranking
+-- 3.1 ROW_NUMBER() for Ranking
 -- Example: Ranking employees by salary within each department
 SELECT employee_name, salary, department_id,
        ROW_NUMBER() OVER (PARTITION BY department_id ORDER BY salary DESC) AS salary_rank
 FROM employees;
 
--- 2.2 LEAD() and LAG() for Time-Based Analysis
+-- 3.2 LEAD() and LAG() for Time-Based Analysis
 -- Example: Analyzing the change in sales over time
 SELECT order_date, total_sales,
        LAG(total_sales) OVER (ORDER BY order_date) AS previous_sales,
@@ -38,9 +38,9 @@ SELECT order_date, total_sales,
 FROM orders;
 
 
--- Section 3: Common Table Expressions (CTEs)
+-- Section 4: Common Table Expressions (CTEs)
 
--- 3.1 Recursive CTE for Hierarchical Data
+-- 4.1 Recursive CTE for Hierarchical Data
 -- Example: Selecting all employees in a hierarchical manner
 WITH RECURSIVE EmployeeHierarchy AS (
   SELECT employee_id, employee_name, manager_id
@@ -55,7 +55,7 @@ UNION ALL
 )
 SELECT * FROM EmployeeHierarchy;
 
--- 3.2 Using CTEs for Complex Queries
+-- 4.2 Using CTEs for Complex Queries
 -- Example: Calculating the average salary difference from department average
 WITH DepartmentAvg AS (
   SELECT department_id, AVG(salary) AS avg_salary
@@ -67,15 +67,15 @@ FROM employees e
 JOIN DepartmentAvg d ON e.department_id = d.department_id;
 
 
--- Section 4: Advanced Aggregations
+-- Section 5: Advanced Aggregations
 
--- 4.1 GROUP_CONCAT() for Concatenation
+-- 5.1 GROUP_CONCAT() for Concatenation
 -- Example: Concatenating employee names in each department
 SELECT department_id, GROUP_CONCAT(employee_name ORDER BY employee_name ASC) AS employee_list
 FROM employees
 GROUP BY department_id;
 
--- 4.2 ROLLUP for Hierarchical Aggregation
+-- 5.2 ROLLUP for Hierarchical Aggregation
 -- Example: Aggregating sales by region and month with ROLLUP
 SELECT region, MONTH(order_date) AS month, SUM(total_sales) AS monthly_sales
 FROM sales
