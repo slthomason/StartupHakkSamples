@@ -17,7 +17,7 @@ builder.Services.AddSingleton<IDbConnectionService>(provider =>
 
 builder.Services.AddHealthChecks();
 builder.Services.AddHealthChecks()
-    .AddCheck<DatabaseHealthCheck>("Sample");
+    .AddCheck<DatabaseHealthCheck>("Database");
 
 
 builder.Services.AddEndpointsApiExplorer();
@@ -34,7 +34,7 @@ if (app.Environment.IsDevelopment())
 
 
 
-app.MapHealthChecks("/healthz");
+app.MapHealthChecks("/checkHealth");
 
 app.UseRouting();
 app.UseHttpsRedirection();

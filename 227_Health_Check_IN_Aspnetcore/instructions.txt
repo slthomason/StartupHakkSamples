@@ -1,3 +1,9 @@
 Slides: https://docs.google.com/presentation/d/1IuKqdQqa3g5VxSQhzI5Pn0cMsnHOH3SZb9_KY5KzxqI/edit#slide=id.g30122787b8c_0_29
 
 Referece: https://medium.com/@m.mobasher.z/implementing-health-checks-in-net-core-with-aspnetcore-healthcheck-ui-client-a944a0d89d6b
+
+1. Change database connection in appsettings.development.json 
+2. Run the application 
+3. {{baseUrl}}/checkHealth
+    1. If Your database is connected you will recieve 200 status with healthy 
+    2. If Your database is down you will recieve 503 stauts with unhealthy
