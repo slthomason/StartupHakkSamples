@@ -1,0 +1,3 @@
+Slides: https://docs.google.com/presentation/d/1IuKqdQqa3g5VxSQhzI5Pn0cMsnHOH3SZb9_KY5KzxqI/edit#slide=id.g30122787b8c_0_29
+
+Referece: https://medium.com/@m.mobasher.z/implementing-health-checks-in-net-core-with-aspnetcore-healthcheck-ui-client-a944a0d89d6b
