@@ -1,0 +1,6 @@
+@EfCoreTips_HostAddress = http://localhost:5105
+
+GET {{EfCoreTips_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

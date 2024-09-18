@@ -1,0 +1,6 @@
+Slides: https://docs.google.com/presentation/d/1q1DJuw8fensfde3_XSJTvRn48CW2Aq-ONTU9v86uJ00/edit#slide=id.g3020d6da935_0_47
+
+Referece: https://medium.com/@davidcsguitar/7-entity-framework-core-tips-from-microsoft-top-engineers-2b9719c3b69e
+
+1. Change database connection in appsettings.development.json 
+2. Check the Controller/ValueController/efCoreTips
