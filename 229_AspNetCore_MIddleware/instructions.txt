@@ -1,0 +1,5 @@
+Slides: https://docs.google.com/presentation/d/1kHzr5rQW3mlcjYeOdEz-UjYBx5MEE_5r5DTCUgEVIDg/edit#slide=id.p
+
+Referece: https://krishan-samarawickrama.medium.com/the-essential-middleware-every-asp-net-core-api-needs-9c64564227ad
+
+2. Check the Controller/ValueController/fetchUsers
