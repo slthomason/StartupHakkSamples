@@ -1,0 +1,6 @@
+@JsonOptimisation_HostAddress = http://localhost:5115
+
+GET {{JsonOptimisation_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

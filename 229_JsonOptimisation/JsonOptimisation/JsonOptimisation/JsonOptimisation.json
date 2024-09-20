@@ -1,0 +1,104 @@
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    
+    // 1. Minimize data size using short and Descriptive keys with camelCase
+
+    // Ineffecient
+    {
+        "first_name": "John",
+        "last_name": "Doe"
+    }
+      
+    // Efficient
+    {
+        "firstName": "John",
+        "lastName": "Doe"
+    }
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    // 2. Abbreviate when it’s possible without sacrificing clarity
+
+    // Inefficient
+    {
+        "applicationVersion": "v102.3"
+    }
+   
+    // Efficient
+    {
+        "appVer": "v102.3"
+    }
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    //3. Use Arrays Wisely minimizing nesting and avoiding deeply nested arrays, 
+    //   as they can increase the complexity of parsing and traversing JSON.
+
+    // Inefficient
+    {
+        "product": {
+        "id": 123,
+        "name": "Acme Prod",
+        "colors": {
+            "color1": "Red",
+            "color2": "Blue",
+            "color3": "Green"
+        }
+        }
+    }
+  
+    // Efficient
+    {  
+        "productId": 123,
+        "productName": "Acme Prod",
+        "productColors": ["Red", "Blue", "Green"]
+    }
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    //4. Optimize Number Representations using integers when possible
+    
+    // Inefficient
+    {
+      "price": 99.90
+    }
+
+    // Efficient
+    {
+      "price": 9990
+    }
+
+    // Multiply price with 100 to remove decimal places
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    //5. Remove Redundancy avoiding repetitive data
+    
+    // Inefficient
+    {
+        "product1": {
+        "name": "Product A",
+        "price": 100
+        },
+        "product2": {
+        "name": "Product A",
+        "price": 200
+        }
+    }
+  
+    // Efficient
+    {
+        "products": [
+        {
+            "name": "Product A",
+            "price": 100
+        },
+        {
+            "name": "Product B",
+            "price": 200
+        }
+        ]
+    }

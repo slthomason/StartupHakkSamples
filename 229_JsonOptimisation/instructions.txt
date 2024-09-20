@@ -1,0 +1,7 @@
+Slides: https://docs.google.com/presentation/d/1U43g3dYoHXIRahhuTkEd8PKwLrLpB19bsRzn3BMvB7A/edit#slide=id.g302f6d47a75_0_24
+
+Referece: https://andreapollastri.medium.com/how-to-optimize-your-json-api-response-58b9c27d7024
+
+1. Program.cs Check code in comment
+2. Check the Controller/ValueController/inMemoryCache for Server side caching
+3. Firstly described tips in slide are given in file "JsonOptimisation.json"
