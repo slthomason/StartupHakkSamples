@@ -1,0 +1,8 @@
+Slides: https://docs.google.com/presentation/d/1ODjiaijSL6nUchE2VgNu1tTVy7vTA2fUiNvOXcuPjWA/edit#slide=id.g3047db97ad6_0_21
+
+Referece: https://medium.com/@h5game/finding-elements-in-a-list-comparing-the-performance-of-find-and-firstordefault-f7ff41cd13be
+
+1. Program.cs Check code in comment
+2. Check the ListTest.cs
+3. Set the path of local folder to store all the logs of benchmark in program.cs
+4. Run the project in release mode and check the terminal to see Console logs
