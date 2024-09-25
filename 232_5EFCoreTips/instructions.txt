@@ -1,0 +1,8 @@
+Slides: https://docs.google.com/presentation/d/1_czwBASiapgw6PKdFV0y9txOyUqVylmoKa1TPolQ_98/edit#slide=id.g305733d1aaa_0_55
+
+Referece: https://medium.com/@MilanJovanovicTech/5-ef-core-features-you-need-to-know-a2ec5825dfab
+
+1. Change database connection in appsettings.development.json 
+2. Check the Controller/ValueController
+3. Check Database/RawQueryResponse
+4. Check Database/DatabaseContext
