@@ -1,0 +1,5 @@
+Slides: https://docs.google.com/presentation/d/1tWbwGt1X2WX8kF4HWs3Po-MqhF2om_EmrE4dTjmwiU0/edit#slide=id.g3058ff5fcc5_0_61
+
+Referece: https://levelup.gitconnected.com/types-of-parallelism-in-c-945973d7c009
+
+1. Every Typs is defined in separate class, Run the project and check the console
