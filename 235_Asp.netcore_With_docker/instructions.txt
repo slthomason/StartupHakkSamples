@@ -1,0 +1,11 @@
+Slides: https://docs.google.com/presentation/d/1yN5gm-mR3srZHLoigSKo685YINcXE7_Nq6gpJzK8JnI/edit#slide=id.g305dd23bfe0_0_39
+
+Referece: https://blog.devgenius.io/building-a-multi-container-net-core-application-with-docker-compose-7f06a8e028dd
+
+
+1. Create the file named as "Dockerfile" in project root directory without using any extension
+2. Create the file named as "docker-compose.yml" in in project root directory
+3. Correct the .csproj path in Dockerfile
+4. Map ports in docker-compose.yml
+5. You must have docker installed in your system
+6. Command to run is "docker-compose up --build"
