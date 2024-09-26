@@ -1,0 +1,6 @@
+Slides: https://docs.google.com/presentation/d/1eqdFuhNzOu-MxT7Q_yg_CWSNruHtcHb0JWMrsVMODoE/edit#slide=id.g30603ea9653_0_0
+
+Referece: https://medium.com/@paulotorres/real-time-image-recognition-with-net-core-and-tensorflow-5b03743e0116
+
+
+1. Removed to take feed from the webcam, instead of it, it will load img1.jpg and display what is about image in console.
