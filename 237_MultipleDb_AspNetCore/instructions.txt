@@ -1,0 +1,11 @@
+Slides: https://docs.google.com/presentation/d/11u1yrq8NMUUXvwfoz_YyHSRucA1qsrFJGVWLBTI7X0k/edit#slide=id.g305f5f9d741_0_31
+
+Referece: https://medium.com/@artak.galstyan.73/implementing-the-repository-pattern-with-multiple-databases-in-c-and-net-248a89c43e3a
+
+1. Change database connection in appsettings.development.json 
+2. Install EF Core and EF Core SQL Nuget
+3. Check Database / Both Contexts
+4. IDbContextProvider is handeling the multiple databases
+5. IRepository is performing actions
+6. Check ValuesController
+7. Check Program.cs
