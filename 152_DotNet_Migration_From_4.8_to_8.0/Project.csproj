@@ -34,7 +34,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
 -   <TargetFramework>net48</TargetFramework>
-+   <TargetFramework>net80</TargetFramework>
++   <TargetFramework>net8.0</TargetFramework>
     <OutputType>Exe</OutputType>
   </PropertyGroup>  
 
@@ -42,5 +42,5 @@
   <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
 -   <TargetFramework>netstandard2.0</TargetFramework>
-+   <TargetFramework>net80</TargetFramework>
++   <TargetFramework>net8.0</TargetFramework>
   </PropertyGroup>
