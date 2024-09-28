@@ -31,7 +31,7 @@ namespace EFCoreTips.Controllers
             // First Query = Select * FROM Products WHERE isActive = 1;
             // Second Query = Select * FROM Categories WHERE CatId IN (select catId from first query result);
 
-            return Ok();
+            return Ok(getProducts);
         }
 
         [HttpGet("bulkUpdatesAndDeletes")]
@@ -67,7 +67,7 @@ namespace EFCoreTips.Controllers
         {
 
             //IF you want to write raw SQL query and you do not want to use the built-In EF CORE functions or if you want to use the stored procedure
-            await _db.Set<RawProductsResponse>() // You have to register your responses in dbcontext (OnModelCreating method)
+            var prods = await _db.Set<RawProductsResponse>() // You have to register your responses in dbcontext (OnModelCreating method)
             .FromSqlRaw("SELECT * FROM PRODUCTS")
             .ToListAsync()
             .ConfigureAwait(false);

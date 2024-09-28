@@ -10,7 +10,7 @@ builder.Services.AddMemoryCache();
 
 builder.Services.AddScoped<ICatRepo, CatRepo>();
 builder.Services.AddDbContext<DatabaseContext>(options =>
-        options.UseSqlServer(builder.Configuration["database:local"]));
+        options.UseSqlite(builder.Configuration["database:local"]));
 
         
 builder.Services.AddControllers();

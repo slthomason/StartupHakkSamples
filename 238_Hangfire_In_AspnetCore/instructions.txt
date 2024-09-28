@@ -2,7 +2,7 @@ Slides: https://docs.google.com/presentation/d/15UivAV2wSp4S9879ewG3bQL4qyS9JSqU
 
 Referece: https://medium.com/c-sharp-programming/implement-hangfire-with-asp-net-core-8b4b1b9ad63a
 
-1. Change database connection in appsettings.development.json 
+1. Change database connection in appsettings.development.json with your connectionstring
 2. Nuget Packages are following
     a.Hangfire.AspNetCore
     b.Hangfire.SqlServer
@@ -11,3 +11,5 @@ Referece: https://medium.com/c-sharp-programming/implement-hangfire-with-asp-net
     e.Microsoft.EntityFrameworkCore.SqlServer
 3. Create Background Service and settle the code whatever you want
 4. Check Program.cs
+5. /Hangfire is the dashboard route of hangfire.
+5. You have been provided with basic db.sql script so you can use the same databaes i used .

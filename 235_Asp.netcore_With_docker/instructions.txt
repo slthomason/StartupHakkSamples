@@ -9,3 +9,6 @@ Referece: https://blog.devgenius.io/building-a-multi-container-net-core-applicat
 4. Map ports in docker-compose.yml
 5. You must have docker installed in your system
 6. Command to run is "docker-compose up --build"
+
+NOTE:
+    Docker creates your database but if you want to use your own database you have db.sql sript, you have to download SQL Server and use this script and get the connectionstring in appsettings.json

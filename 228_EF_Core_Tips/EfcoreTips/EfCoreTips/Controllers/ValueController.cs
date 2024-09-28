@@ -20,6 +20,7 @@ namespace EfCoreTips.Controllers
         [HttpGet("EfCore")]
         public async Task<IActionResult> efCoreTips()
         {
+
             //Project -- Select specific columns that you need
             var projection = await _db.products
             .Where(prod => prod.catId == 5)
@@ -35,8 +36,17 @@ namespace EfCoreTips.Controllers
             //Split Query -- breaks down a query involving a large number of related entities into multiple SQL queries, reducing the size of the result set.
             var splitQuery = await _db.products
             .Include(prod => prod.categories)
+            .Select(prod => new 
+            {
+                productId = prod.productId,
+                productName = prod.productName,
+                catId = prod.catId,
+                categories = prod.categories,
+                isActive = prod.isActive,
+            })
             .AsSplitQuery()
             .ToListAsync();
+
 
 
             //If you want to have a more responsive application, use the asynchronous methods that EF Core provides.

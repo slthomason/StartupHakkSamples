@@ -2,11 +2,12 @@ Slides: https://docs.google.com/presentation/d/1jtS4-3PL7zVAQyvI719G1nujnndkbUKB
 
 Referece: https://medium.com/@murataslan1/migrating-from-redis-to-in-memory-caching-in-net-core-a-step-by-step-guide-e3932cc4caaa
 
-1. Change database connection in appsettings.development.json 
+1. Run the migration "dotnet ef database update 'initialize_db'"
 2. Nuget Packages are following
     a.Microsoft.Extensions.Caching.Memory
     b.Microsoft.EntityFrameworkCore
-    c.Microsoft.EntityFrameworkCore.SqlServer
+    c.Microsoft.EntityFrameworkCore.Sqlite
+    d.Microsoft.EntityFrameworkCore.Design
 3. Check the Database folder
 4. Check Program.cs
 5. Check Services folder

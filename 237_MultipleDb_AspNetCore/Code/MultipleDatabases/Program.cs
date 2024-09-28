@@ -7,10 +7,10 @@ var builder = WebApplication.CreateBuilder(args);
 
 
 builder.Services.AddDbContext<UsersContext>(options =>
-            options.UseSqlServer(builder.Configuration.GetConnectionString("user")), ServiceLifetime.Transient);
+            options.UseSqlite(builder.Configuration.GetConnectionString("user")), ServiceLifetime.Transient);
 
 builder.Services.AddDbContext<RestaurantContext>(options =>
-            options.UseSqlServer(builder.Configuration.GetConnectionString("restaurant")), ServiceLifetime.Transient);
+            options.UseSqlite(builder.Configuration.GetConnectionString("restaurant")), ServiceLifetime.Transient);
 
 builder.Services.AddScoped<IDbContextProvider, DbContextProvider>();
 builder.Services.AddScoped(typeof(IRepository<,>), typeof(Repository<,>));

@@ -3,7 +3,6 @@ using Hangfire.Interface;
 using Hangfire.Models;
 using Hangfire.Services;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Scaffolding.Metadata;
 
 
 var builder = WebApplication.CreateBuilder(args);

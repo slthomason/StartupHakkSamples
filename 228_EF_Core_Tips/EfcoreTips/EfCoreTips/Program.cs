@@ -9,7 +9,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContextPool<DatabaseContext>(
-                options => options.UseSqlServer(builder.Configuration["database:local"]));
+                options => options.UseSqlite(builder.Configuration["database:local"]));
 
 var app = builder.Build();
 
