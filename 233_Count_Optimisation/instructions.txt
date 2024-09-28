@@ -1,4 +1,4 @@
-Slides: https://docs.google.com/presentation/d/1V_9AZb_LpfgJrn3pQybdRYyTD6tAoSB2-Reiz9Me_vQ/edit#slide=id.g30592502f4c_0_0
+Slides: https://docs.google.com/presentation/d/1V_9AZb_LpfgJrn3pQybdRYyTD6tAoSB2-Reiz9Me_vQ/edit?usp=sharing
 
 Referece: https://medium.com/data-engineer/count-vs-count-1-in-sql-4d7237f91023
 

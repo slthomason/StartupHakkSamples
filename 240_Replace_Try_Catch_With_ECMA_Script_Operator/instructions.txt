@@ -1,0 +1,24 @@
+Slides: https://docs.google.com/presentation/d/1r3wDScEdEVqeky25kqf9o8UiOz2E-PCDAKQ-KmdzplE/edit?usp=sharing
+
+Referece: https://javascript.plainenglish.io/say-goodbye-to-try-catch-with-this-new-ecmascript-operator-e2b798c7b7a8
+
+Here are the instructions on how to run the project:
+
+1. Install Dependencies:
+	- Open your terminal and navigate to the root directory of the project.
+	- Run the following command to install all necessary dependencies: npm install
+2. Run the Project:
+	- After the dependencies are installed, start the project by running: npm run dev
+3. Documentation:
+	- Additional information, please refer to the README.md file located in the project directory.
+4. Running Demos:
+	- To give a demo using the try-catch method:
+		- Comment out the import line for safe-assignment-way.js in main.js.
+		- Uncomment the import line for try-catch-way.js in main.js.
+	- For the safe assignment demo:
+		- Comment out the import line for try-catch-way.js in main.js.
+		- Uncomment the import line for safe-assignment-way.js in main.js.
+5. Method Overview:
+	- Each file contains two methods:
+		- Fetch Method: This method fetches data and displays it in the console.
+		- Error Handling Method: This method throws an error to demonstrate proper error handling.
