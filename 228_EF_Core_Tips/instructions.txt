@@ -2,5 +2,5 @@ Slides: https://docs.google.com/presentation/d/1q1DJuw8fensfde3_XSJTvRn48CW2Aq-O
 
 Referece: https://medium.com/@davidcsguitar/7-entity-framework-core-tips-from-microsoft-top-engineers-2b9719c3b69e
 
-1. Change database connection in appsettings.development.json 
+1. Run the migrations to update database "dotnet ef database update 'insert_Tables' "
 2. Check the Controller/ValueController/efCoreTips

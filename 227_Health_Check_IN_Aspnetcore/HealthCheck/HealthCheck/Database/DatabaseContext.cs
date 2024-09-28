@@ -1,5 +1,5 @@
 using System.Data;
-using Microsoft.Data.SqlClient;
+using Microsoft.Data.Sqlite;
 
 namespace HealthCheck.Database;
 
@@ -19,7 +19,7 @@ public class DbConnectionService : IDbConnectionService
 
     public async Task<IDbConnection> GetConnectionAsync()
     {
-        var connection = new SqlConnection(_connectionString);
+        var connection = new SqliteConnection(_connectionString);
         await connection.OpenAsync();
         return connection;
     }

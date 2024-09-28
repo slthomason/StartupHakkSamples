@@ -16,4 +16,19 @@
     <PackageReference Include="TensorFlow.NET" Version="0.150.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="img1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="models\labels.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="models\mobilenet_v2_1.4_224_frozen.pb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="models\tensorflow_inception_graph.pb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

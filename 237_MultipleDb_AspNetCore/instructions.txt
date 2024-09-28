@@ -2,8 +2,9 @@ Slides: https://docs.google.com/presentation/d/11u1yrq8NMUUXvwfoz_YyHSRucA1qsrFJ
 
 Referece: https://medium.com/@artak.galstyan.73/implementing-the-repository-pattern-with-multiple-databases-in-c-and-net-248a89c43e3a
 
-1. Change database connection in appsettings.development.json 
-2. Install EF Core and EF Core SQL Nuget
+1. Run the migrations command in terminal "dotnet ef database update 'initialize_db' --context RestaurantContext"
+2. Run the migrations command in terminal "dotnet ef database update 'initialize_db' --context UsersContext"
+2. Install Microsoft.EntityFrameworkCore Microsoft.EntityFrameworkCore.Design and Microsoft.EntityFrameworkCore.Sqlite Nuget
 3. Check Database / Both Contexts
 4. IDbContextProvider is handeling the multiple databases
 5. IRepository is performing actions

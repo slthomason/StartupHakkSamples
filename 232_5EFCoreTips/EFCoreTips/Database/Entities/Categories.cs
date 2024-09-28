@@ -10,4 +10,6 @@ public class Categories
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public required int catId {get;set;}
     public required string catName {get;set;}
+    [NotMapped]
+    public ICollection<Products> products{get;set;}
 }

@@ -2,10 +2,14 @@ Slides: https://docs.google.com/presentation/d/1yN5gm-mR3srZHLoigSKo685YINcXE7_N
 
 Referece: https://blog.devgenius.io/building-a-multi-container-net-core-application-with-docker-compose-7f06a8e028dd
 
+1. Run the migration " dotnet ef database update 'initialize_db' "
+2. Change the database connection in appsettings.json with your local sql server connection string
+3. Create the file named as "Dockerfile" in project root directory without using any extension
+4. Create the file named as "docker-compose.yml" in in project root directory
+5. Correct the .csproj path in Dockerfile
+6. Map ports in docker-compose.yml
+7. You must have docker installed in your system
+8. Command to run is "docker-compose up --build"
 
-1. Create the file named as "Dockerfile" in project root directory without using any extension
-2. Create the file named as "docker-compose.yml" in in project root directory
-3. Correct the .csproj path in Dockerfile
-4. Map ports in docker-compose.yml
-5. You must have docker installed in your system
-6. Command to run is "docker-compose up --build"
+NOTE:
+    Docker creates your database but if you want to use your own database you have db.sql sript, you have to download SQL Server and use this script and get the connectionstring in appsettings.json
