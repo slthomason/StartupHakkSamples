@@ -26,7 +26,7 @@ async function fetchTodo(todoId) {
 }
 
 // This immediately invoked async function fetches a todo with a valid ID
-// If the fetch is successful, it logs the user data to the console.
+// If the fetch is successful, it logs the todo data to the console.
 // If there is an error (e.g., todo item not found), it logs the error message.
 (async () => {
     try {
