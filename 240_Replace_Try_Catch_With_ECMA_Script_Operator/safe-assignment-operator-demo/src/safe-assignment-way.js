@@ -30,8 +30,8 @@ async function fetchTodo(todoId) {
 }
 
 
-// This immediately invoked async function fetches a user with a valid ID
-// If the fetch is successful, it logs the user data to the console.
+// This immediately invoked async function fetches a todo item with a valid ID
+// If the fetch is successful, it logs the todo item data to the console.
 // If there is an error (e.g., user not found), it logs the error message.
 (async () => {
     const [error, user] = await fetchTodo[Symbol.result](2);
@@ -43,9 +43,9 @@ async function fetchTodo(todoId) {
     }
 })();
 
-// This immediately invoked async function attempts to fetch a user with an invalid ID
+// This immediately invoked async function attempts to fetch a todo item with an invalid ID
 // The function expects to handle an error, such as a 404 Not Found response.
-// If an error occurs, it logs the error message; otherwise, it logs the user data.
+// If an error occurs, it logs the error message; otherwise, it logs the todo item data.
 (async () => {
     const [error, user] = await fetchTodo[Symbol.result]("wrong id");
 
