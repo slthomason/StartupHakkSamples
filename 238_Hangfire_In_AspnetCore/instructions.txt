@@ -2,15 +2,19 @@ Slides: https://docs.google.com/presentation/d/15UivAV2wSp4S9879ewG3bQL4qyS9JSqU
 
 Referece: https://medium.com/c-sharp-programming/implement-hangfire-with-asp-net-core-8b4b1b9ad63a
 
-1. Change database connection in appsettings.development.json with your connectionstring
-2. Run the migration " dotnet ef database update 'initialize db' " & you will have your database
-3. Nuget Packages are following
-    a.Hangfire.AspNetCore
-    b.Hangfire.SqlServer
-    c.Microsoft.Data.SqlClient
-    d.Microsoft.EntityFrameworkCore
-    e.Microsoft.EntityFrameworkCore.SqlServer
-4. Create Background Service and settle the code whatever you want
-5. Check Program.cs
-6. /Hangfire is the dashboard route of hangfire.
-7. You have been provided with basic db.sql script so you can use the same databaes i used .
+1. NuGet Packaged installed it this project: 
+    	- Microsoft.EntityFrameworkCore
+	- Microsoft.EntityFrameworkCore.Tools
+    	- Microsoft.EntityFrameworkCore.Sqlite
+	- Hangfire.AspNetCore
+    	- Hangfire.SQLite
+2. Run Migrations:
+	- Open the Package Manager Console in Visual Studio (go to Tools > NuGet Package Manager > Package Manager Console).
+	- Execute the following command to apply the migration: update-database
+	- This will create your database based on the specified migration.
+3. View Program.cs and Create Background Service and settle the code whatever you want in BackgroundJobService.cs
+4. Access Hangfire Dashboard:
+	- Run your project, and once it’s running, open your web browser.
+	- Navigate to /hangfire to access the Hangfire dashboard.
+
+

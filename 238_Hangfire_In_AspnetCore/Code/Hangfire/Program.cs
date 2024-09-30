@@ -2,6 +2,7 @@ using Hangfire;
 using Hangfire.Interface;
 using Hangfire.Models;
 using Hangfire.Services;
+using Hangfire.SQLite;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -9,12 +10,12 @@ var builder = WebApplication.CreateBuilder(args);
 
 
 builder.Services.AddDbContext<DatabaseContext>(options =>
-    options.UseSqlServer(builder.Configuration["database:local"]));
+    options.UseSqlite(builder.Configuration["database:local"]));
 
 
 //HangFire
 builder.Services.AddHangfire(config =>
-    config.UseSqlServerStorage(builder.Configuration["database:local"])); // Use a valid connection string
+    config.UseSQLiteStorage("Data Source=hangfire.db;")); // Use a valid connection string
 
 builder.Services.AddHangfireServer();
 
@@ -46,7 +47,11 @@ using (var scope = app.Services.CreateScope())
 }
 
 app.UseHangfireDashboard();
-app.MapGet("/", () => "Hangfire with .NET Core!");
+app.MapGet("/", (context) =>
+{
+    context.Response.Redirect("/hangfire");
+    return Task.CompletedTask;
+});
 //HangFire
 
 app.UseSwagger();

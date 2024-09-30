@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 
-builder.Services.AddDbContextPool<DatabaseContext>(options => options.UseSqlServer(builder.Configuration["database:local"]));
+builder.Services.AddDbContextPool<DatabaseContext>(options => options.UseSqlite(builder.Configuration["database:local"]));
 
 builder.Services.AddControllers();
 

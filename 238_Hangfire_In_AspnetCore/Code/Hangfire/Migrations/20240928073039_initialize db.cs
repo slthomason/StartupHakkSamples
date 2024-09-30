@@ -16,7 +16,7 @@ namespace Hangfire.Migrations
                 {
                     catId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    catName = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    catName = table.Column<string>(type: "varchar(255)", nullable: false)
                 },
                 constraints: table =>
                 {

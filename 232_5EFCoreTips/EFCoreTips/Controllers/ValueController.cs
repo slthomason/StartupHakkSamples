@@ -1,4 +1,5 @@
 using EfCoreTips.Database;
+using EfCoreTips.Database.Entities;
 using EFCoreTips.Database.RawQueryResponses;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -21,8 +22,14 @@ namespace EFCoreTips.Controllers
         {
             var getProducts = await _db.products
                                 .AsNoTracking() // IT WILL MAKE QUERY MORE OPTIMISED
-                                .Where(x => x.isActive)
+                                .Where(x => !x.isActive)
                                 .Include(x=>x.categories)
+                                .Select(x => new {
+                                    productId = x.productId,
+                                    productName = x.productName,
+                                    isActive = x.isActive,
+                                    categories = x.categories
+                                })
                                 .AsSplitQuery()
                                 .ToListAsync()
                                 .ConfigureAwait(false);
@@ -50,7 +57,7 @@ namespace EFCoreTips.Controllers
 
 
             //BULK DELETION
-            await _db.products
+            var result = await _db.products
                 .Where(product => product.isActive == false)
                 .ExecuteDeleteAsync();
             
@@ -59,7 +66,7 @@ namespace EFCoreTips.Controllers
                 
             
 
-            return Ok();
+            return Ok(result);
         }
 
         [HttpGet("rawSQLQuery")]
@@ -73,7 +80,7 @@ namespace EFCoreTips.Controllers
             .ConfigureAwait(false);
             
 
-            return Ok();
+            return Ok(prods);
         }
 
 
@@ -94,7 +101,11 @@ namespace EFCoreTips.Controllers
 
             
 
-            return Ok();
+            return Ok(new 
+            {
+                activeProducts = activeProducts,
+                allProducts = allProducts
+            });
         }
     }
 }
