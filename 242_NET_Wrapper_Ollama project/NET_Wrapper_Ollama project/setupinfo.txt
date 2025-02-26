@@ -1,0 +1,11 @@
+.NET Wrapper for Ollama This project is a simple .NET console application that connects to a locally running Ollama AI model. 
+The application allows users to chat with the AI model using Microsoft.Extensions.AI and provides an abstraction layer 
+for easy integration with different AI models.
+
+Setup Instructions
+
+    Verify Ollama Installation by running the command: ollama
+    Start Ollama by running: ollama serve
+    Pull the AI Model by running: ollama pull phi3:mini
+    Run the AI Model using: ollama run phi3:mini
+    Restore dependencies and run the .NET application with: dotnet restore followed by dotnet run
