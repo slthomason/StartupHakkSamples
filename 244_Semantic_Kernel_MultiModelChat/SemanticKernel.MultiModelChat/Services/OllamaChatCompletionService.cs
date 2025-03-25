@@ -9,7 +9,7 @@ using OllamaSharp.Models.Chat;
 public class OllamaChatCompletionService : IChatCompletionService
 {
     private readonly IOllamaApiClient ollamaApiClient;
-    private const string DefaultModel = "phi3:mini"; // model as a constant for easy changing
+    private const string DefaultModel = "gemma3:1b"; // model as a constant for easy changing
 
     public OllamaChatCompletionService(IOllamaApiClient ollamaApiClient)
     {
