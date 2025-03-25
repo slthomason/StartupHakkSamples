@@ -237,7 +237,7 @@ class Program
         {
             var requestBody = new
             {
-                model = "tinyllama:latest",
+                model = "gemma3:1b",
                 messages = new[] { new { role = "user", content = $"Tell me about {userPrompt}" } },
                 stream = false,
                 format = format
