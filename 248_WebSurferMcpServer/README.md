@@ -1,16 +1,11 @@
-# MCPServer.CSharp
+# MCP WebSurfer
 
-A Model Context Protocol (MCP) server built using the C# SDK that provides AI-powered tools for web surfing, content safety analysis, and campaign analytics.
+A Model Context Protocol (MCP) server built using the C# SDK that provides AI-powered tools for web surfing and content extraction.
 
 ## Project Structure
 
 - **Program.cs**: Main entry point that configures logging, registers services, and sets up the MCP server
 - **WebSurferTool.cs**: Tools for browsing the web, extracting content, and summarizing web pages
-- **CleanRouterService.cs**: Service for analyzing website safety and categorization
-- **CleanRouterCrawlerTool.cs**: Web crawler tool for batch analysis of websites
-- **ViciNotebookService.cs**: Backend service for notebook management
-- **ViciNotebookTool.cs**: Tools for notebook creation and management
-- **ViciCampaignReportTool.cs**: Tools for campaign analytics and reporting
 
 ## Features
 
@@ -23,28 +18,6 @@ A Model Context Protocol (MCP) server built using the C# SDK that provides AI-po
 - **WebSearch**: Performs a simple search and returns the top results
 - **SummarizeWebPage**: Summarizes the content of a web page in a few sentences
 
-### Web Safety Tools
-
-- **ListAnalyzedSites**: Lists websites that have been analyzed, optionally filtered by category
-- **AnalyzePageSafety**: Analyzes a webpage for safety and content categorization
-- **StartCatalogCrawler**: Starts cataloging websites from seed URLs
-- **GetCatalogStatus**: Gets the current status of the internet cataloging process
-- **ImportUrlList**: Imports a list of URLs to analyze in batch mode
-- **GenerateCatalogReport**: Generates a summary report of the catalog
-
-### Campaign Reporting Tools
-
-- **ListCampaigns**: Lists all available campaign IDs with names
-- **GenerateCampaignReport**: Generates a JSON analytics report for a campaign
-
-### Notebook Tools
-
-- **ListNotebooks**: Lists all analysis notebooks
-- **CreateNotebook**: Creates a new analysis notebook for a campaign
-- **GetNotebook**: Gets a specific analysis notebook with all its cells
-- **AddMarkdownCell**: Adds a markdown cell to a notebook
-- **ExecuteCell**: Executes a cell and returns its results
-
 ## Getting Started
 
 1. Clone this repository
@@ -53,7 +26,10 @@ A Model Context Protocol (MCP) server built using the C# SDK that provides AI-po
 
 ## Configuration
 
-By default, the MCP server uses standard input/output for communication. You can configure it to use Server-Sent Events (SSE) for HTTP-based communication by modifying Program.cs.
+The MCP server uses standard input/output for communication. The server is configured with:
+- Debug-level logging
+- Console output for all log levels
+- HttpClient with proper timeout settings
 
 ## Using with Claude
 
@@ -64,8 +40,7 @@ You can use these tools with Claude by:
    - "Fetch the title of https://microsoft.com"
    - "Extract all links from https://github.com"
    - "Summarize the content of https://en.wikipedia.org/wiki/Artificial_intelligence"
-   - "Analyze the safety of https://example.com"
-   - "Generate a report for campaign CAMP-001"
+   - "Search for information about quantum computing"
 
 ## VS Code Integration
 
@@ -89,4 +64,20 @@ To use this server with VS Code and GitHub Copilot:
 }
 ```
 
-2. Select the MCPServer.CSharp server in GitHub Copilot 
+2. Select the MCPServer.CSharp server in GitHub Copilot
+
+## Error Handling
+
+The WebSurfer tools include comprehensive error handling:
+- Invalid URLs are automatically normalized
+- Network errors are caught and reported
+- Content extraction failures are handled gracefully
+- All operations have timeout protection
+
+## Dependencies
+
+- .NET 8.0
+- Microsoft.Extensions.Hosting
+- Microsoft.Extensions.Http
+- Microsoft.Extensions.Logging
+- ModelContextProtocol 

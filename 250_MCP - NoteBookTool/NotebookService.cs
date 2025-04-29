@@ -57,13 +57,13 @@ namespace MCPServer.CSharp
         public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
     }
 
-    public class ViciNotebookService
+    public class NotebookService
     {
-        private readonly ILogger<ViciNotebookService> _logger;
+        private readonly ILogger<NotebookService> _logger;
         private readonly Dictionary<string, Campaign> _campaigns = new Dictionary<string, Campaign>();
         private readonly Dictionary<string, AnalysisNotebook> _notebooks = new Dictionary<string, AnalysisNotebook>();
 
-        public ViciNotebookService(ILogger<ViciNotebookService> logger)
+        public NotebookService(ILogger<NotebookService> logger)
         {
             _logger = logger;
             // Create demo campaign data
@@ -261,80 +261,46 @@ namespace MCPServer.CSharp
                 return null;
             }
             
-            // Execute the cell based on its type
             try
             {
+                // Simulate cell execution
+                await Task.Delay(1000); // Simulate some processing time
+                
                 switch (cell.Type)
                 {
                     case NotebookCellType.Data:
-                        // Simulate a SQL query execution
-                        if (cell.Content.Contains("SELECT") && cell.Content.Contains("FROM Calls"))
-                        {
-                            if (!_campaigns.TryGetValue(notebook.CampaignId, out var campaign))
-                            {
-                                cell.Result = "Error: Campaign not found";
-                                break;
-                            }
-                            
-                            // Very simplistic "query parsing" - just a demo!
-                            int limit = 100;
-                            if (cell.Content.Contains("LIMIT"))
-                            {
-                                var limitMatch = System.Text.RegularExpressions.Regex.Match(cell.Content, @"LIMIT\s+(\d+)");
-                                if (limitMatch.Success)
-                                {
-                                    limit = int.Parse(limitMatch.Groups[1].Value);
-                                }
-                            }
-                            
-                            cell.Result = JsonSerializer.Serialize(campaign.Calls.Take(limit));
-                        }
-                        else
-                        {
-                            cell.Result = "Unsupported query format";
-                        }
+                        // Simulate query execution
+                        cell.Result = "Query executed successfully. Results: [...]";
                         break;
                         
                     case NotebookCellType.Chart:
                         // Simulate chart generation
-                        cell.Result = "chart-data-placeholder";
+                        cell.Result = "Chart generated successfully. Data: [...]";
                         break;
                         
                     case NotebookCellType.Insight:
-                        // Simulate LLM analysis
-                        if (cell.Content.StartsWith("ANALYZE:"))
-                        {
-                            var query = cell.Content.Substring("ANALYZE:".Length).Trim();
-                            if (query.Contains("dissatisfaction"))
-                            {
-                                cell.Result = "Based on call analysis, the top 3 factors for dissatisfaction are: 1) Long wait times (mentioned in 68% of calls), 2) Product complexity (52%), and 3) Pricing concerns (47%).";
-                            }
-                            else if (query.Contains("satisfaction") || query.Contains("satisfied"))
-                            {
-                                cell.Result = "Customer satisfaction analysis: 65% of customers reported being 'very satisfied' with their experience, citing helpful agents (78%) and quick resolution (82%) as the primary factors.";
-                            }
-                            else
-                            {
-                                cell.Result = "Analysis complete. Key findings: 1) Call resolution time averages 4.5 minutes, 2) Agent performance is consistent across team members, 3) Morning calls have a 22% higher satisfaction rate than afternoon calls.";
-                            }
-                        }
-                        else
-                        {
-                            cell.Result = "Use format 'ANALYZE: your question' to perform AI analysis";
-                        }
+                        // Simulate AI analysis
+                        cell.Result = "Based on the analysis, key insights include: [...]";
+                        break;
+                        
+                    case NotebookCellType.Markdown:
+                        // Markdown cells don't need execution
+                        cell.Result = null;
                         break;
                 }
+                
+                cell.ExecutedAt = DateTime.UtcNow;
+                notebook.UpdatedAt = DateTime.UtcNow;
+                
+                return cell;
             }
             catch (Exception ex)
             {
-                cell.Result = $"Error executing cell: {ex.Message}";
                 _logger.LogError(ex, "Error executing cell {CellId} in notebook {NotebookId}", cellId, notebookId);
+                cell.Result = $"Error: {ex.Message}";
+                cell.ExecutedAt = DateTime.UtcNow;
+                return cell;
             }
-            
-            cell.ExecutedAt = DateTime.UtcNow;
-            notebook.UpdatedAt = DateTime.UtcNow;
-            
-            return cell;
         }
     }
 } 

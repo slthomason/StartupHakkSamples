@@ -10,7 +10,7 @@ using ModelContextProtocol.Server;
 namespace MCPServer.CSharp
 {
     [McpServerToolType]
-    public static class CleanRouterCrawlerTool
+    public static class CrawlerTool
     {
         private static readonly HashSet<string> _visitedUrls = new HashSet<string>();
         private static readonly Queue<string> _urlQueue = new Queue<string>();
@@ -18,7 +18,7 @@ namespace MCPServer.CSharp
         
         [McpServerTool, Description("Starts cataloging the internet from seed URLs, discovering and analyzing connected sites.")]
         public static string StartCatalogCrawler(
-            CleanRouterService cleanRouterService,
+            CrawlerService crawlerService,
             [Description("Comma-separated list of seed URLs to start crawling from")] string seedUrls,
             [Description("Maximum number of links to follow from each page (default: 5)")] int maxLinksPerPage = 5,
             [Description("Maximum depth to crawl (default: 3)")] int maxDepth = 3)
@@ -53,7 +53,7 @@ namespace MCPServer.CSharp
                 _isCrawling = true;
                 
                 // Start crawling asynchronously
-                Task.Run(() => CrawlWebsites(cleanRouterService, maxLinksPerPage, maxDepth));
+                Task.Run(() => CrawlWebsites(crawlerService, maxLinksPerPage, maxDepth));
                 
                 return $"Started internet cataloging from {urls.Count} seed URLs. Crawling to maximum depth {maxDepth} with {maxLinksPerPage} max links per page.";
             }
@@ -76,7 +76,7 @@ namespace MCPServer.CSharp
         }
         
         [McpServerTool, Description("Gets the current status of the internet cataloging process.")]
-        public static string GetCatalogStatus(CleanRouterService cleanRouterService)
+        public static string GetCatalogStatus(CrawlerService crawlerService)
         {
             var analyzedCount = _visitedUrls.Count;
             var queuedCount = _urlQueue.Count;
@@ -86,9 +86,9 @@ namespace MCPServer.CSharp
                 IsRunning = _isCrawling,
                 AnalyzedUrlCount = analyzedCount,
                 QueuedUrlCount = queuedCount,
-                TotalCatalogSize = cleanRouterService.GetCatalogSize(),
-                Categories = cleanRouterService.GetAvailableCategories()
-                    .ToDictionary(c => c, c => cleanRouterService.GetCatalogEntriesAsync(c).GetAwaiter().GetResult().Count)
+                TotalCatalogSize = crawlerService.GetCatalogSize(),
+                Categories = crawlerService.GetAvailableCategories()
+                    .ToDictionary(c => c, c => crawlerService.GetCatalogEntriesAsync(c).GetAwaiter().GetResult().Count)
             };
             
             return JsonSerializer.Serialize(status, new JsonSerializerOptions { WriteIndented = true });
@@ -96,7 +96,7 @@ namespace MCPServer.CSharp
         
         [McpServerTool, Description("Imports a list of URLs to analyze in batch mode.")]
         public static async Task<string> ImportUrlList(
-            CleanRouterService cleanRouterService,
+            CrawlerService crawlerService,
             [Description("Newline-separated list of URLs to analyze")] string urlList)
         {
             try
@@ -120,7 +120,7 @@ namespace MCPServer.CSharp
                 {
                     try
                     {
-                        var result = await cleanRouterService.AnalyzeWebsiteAsync(url);
+                        var result = await crawlerService.AnalyzeWebsiteAsync(url);
                         results.Add(result);
                         analyzed++;
                         
@@ -154,12 +154,12 @@ namespace MCPServer.CSharp
         
         [McpServerTool, Description("Export the current catalog to a JSON file.")]
         public static string ExportCatalog(
-            CleanRouterService cleanRouterService,
+            CrawlerService crawlerService,
             [Description("Path to save the catalog export")] string filePath)
         {
             try
             {
-                var result = cleanRouterService.SaveCatalogToFileAsync(filePath).GetAwaiter().GetResult();
+                var result = crawlerService.SaveCatalogToFileAsync(filePath).GetAwaiter().GetResult();
                 
                 if (result)
                 {
@@ -177,16 +177,16 @@ namespace MCPServer.CSharp
         }
         
         [McpServerTool, Description("Generates a summary report of the catalog.")]
-        public static string GenerateCatalogReport(CleanRouterService cleanRouterService)
+        public static string GenerateCatalogReport(CrawlerService crawlerService)
         {
             try
             {
-                var categories = cleanRouterService.GetAvailableCategories();
+                var categories = crawlerService.GetAvailableCategories();
                 var categoryStats = new Dictionary<string, object>();
                 
                 foreach (var category in categories)
                 {
-                    var urls = cleanRouterService.GetCatalogEntriesAsync(category).GetAwaiter().GetResult();
+                    var urls = crawlerService.GetCatalogEntriesAsync(category).GetAwaiter().GetResult();
                     
                     // Get safe vs unsafe stats
                     var safeCount = 0;
@@ -194,7 +194,7 @@ namespace MCPServer.CSharp
                     
                     foreach (var url in urls)
                     {
-                        var details = cleanRouterService.GetWebsiteDetailsAsync(url).GetAwaiter().GetResult();
+                        var details = crawlerService.GetWebsiteDetailsAsync(url).GetAwaiter().GetResult();
                         if (details != null)
                         {
                             if (details.IsSafeForChildren)
@@ -215,9 +215,9 @@ namespace MCPServer.CSharp
                 
                 var report = new
                 {
-                    TotalSites = cleanRouterService.GetCatalogSize(),
+                    TotalSites = crawlerService.GetCatalogSize(),
                     CategoryBreakdown = categoryStats,
-                    MostCommonKeywords = cleanRouterService.GetMostCommonKeywords(10),
+                    MostCommonKeywords = crawlerService.GetMostCommonKeywords(10),
                     GeneratedAt = DateTime.UtcNow
                 };
                 
@@ -229,7 +229,7 @@ namespace MCPServer.CSharp
             }
         }
         
-        private static async Task CrawlWebsites(CleanRouterService cleanRouterService, int maxLinksPerPage, int maxDepth)
+        private static async Task CrawlWebsites(CrawlerService crawlerService, int maxLinksPerPage, int maxDepth)
         {
             Console.WriteLine("Starting web crawler for internet cataloging...");
             
@@ -257,7 +257,7 @@ namespace MCPServer.CSharp
                     try
                     {
                         // Analyze the website
-                        var result = await cleanRouterService.AnalyzeWebsiteAsync(url);
+                        var result = await crawlerService.AnalyzeWebsiteAsync(url);
                         
                         // If we haven't reached max depth, enqueue linked URLs
                         if (depth < maxDepth)

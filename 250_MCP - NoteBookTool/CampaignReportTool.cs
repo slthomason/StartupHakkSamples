@@ -8,11 +8,11 @@ using MCPServer.CSharp;
 namespace MCPServer.CSharp
 {
     [McpServerToolType]
-    public static class ViciCampaignReportTool
+    public static class CampaignReportTool
     {
         [McpServerTool, Description("Lists all available campaign IDs with names.")]
         public static string ListCampaigns(
-            ViciNotebookService notebookService)
+            NotebookService notebookService)
         {
             try
             {
@@ -35,9 +35,9 @@ namespace MCPServer.CSharp
             }
         }
 
-        [McpServerTool, Description("Generates a JSON analytics report for a Vici campaign.")]
+        [McpServerTool, Description("Generates a JSON analytics report for a campaign.")]
         public static string GenerateCampaignReport(
-            ViciNotebookService notebookService,
+            NotebookService notebookService,
             [Description("ID of the campaign to report on")] string campaignId)
         {
             try
@@ -97,7 +97,7 @@ namespace MCPServer.CSharp
             }
             catch (Exception ex)
             {
-                return $"Error in ViciCampaignReportTool: {ex.Message}";
+                return $"Error in CampaignReportTool: {ex.Message}";
             }
         }
     }

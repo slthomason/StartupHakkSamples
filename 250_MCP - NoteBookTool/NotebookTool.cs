@@ -7,11 +7,11 @@ using ModelContextProtocol.Server;
 namespace MCPServer.CSharp
 {
     [McpServerToolType]
-    public static class ViciNotebookTool
+    public static class NotebookTool
     {
         [McpServerTool, Description("Lists all analysis notebooks.")]
         public static string ListNotebooks(
-            ViciNotebookService notebookService)
+            NotebookService notebookService)
         {
             try
             {
@@ -37,7 +37,7 @@ namespace MCPServer.CSharp
         
         [McpServerTool, Description("Creates a new analysis notebook for a campaign.")]
         public static string CreateNotebook(
-            ViciNotebookService notebookService,
+            NotebookService notebookService,
             [Description("Title of the new notebook")] string title,
             [Description("ID of the campaign to analyze")] string campaignId)
         {
@@ -54,7 +54,7 @@ namespace MCPServer.CSharp
         
         [McpServerTool, Description("Gets a specific analysis notebook with all its cells.")]
         public static string GetNotebook(
-            ViciNotebookService notebookService,
+            NotebookService notebookService,
             [Description("ID of the notebook to retrieve")] string notebookId)
         {
             try
@@ -73,7 +73,7 @@ namespace MCPServer.CSharp
         
         [McpServerTool, Description("Adds a markdown cell to a notebook.")]
         public static string AddMarkdownCell(
-            ViciNotebookService notebookService,
+            NotebookService notebookService,
             [Description("ID of the notebook to add to")] string notebookId,
             [Description("Markdown content to add")] string content)
         {
@@ -93,7 +93,7 @@ namespace MCPServer.CSharp
         
         [McpServerTool, Description("Adds a data query cell to a notebook.")]
         public static string AddDataQueryCell(
-            ViciNotebookService notebookService,
+            NotebookService notebookService,
             [Description("ID of the notebook to add to")] string notebookId,
             [Description("SQL-like query for campaign data")] string query)
         {
@@ -113,7 +113,7 @@ namespace MCPServer.CSharp
         
         [McpServerTool, Description("Adds a chart visualization cell to a notebook.")]
         public static string AddChartCell(
-            ViciNotebookService notebookService,
+            NotebookService notebookService,
             [Description("ID of the notebook to add to")] string notebookId,
             [Description("Chart specification (e.g., 'BAR CHART: Call Dispositions')")] string chartSpec)
         {
@@ -133,7 +133,7 @@ namespace MCPServer.CSharp
         
         [McpServerTool, Description("Adds an AI insight cell to analyze campaign data.")]
         public static string AddInsightCell(
-            ViciNotebookService notebookService,
+            NotebookService notebookService,
             [Description("ID of the notebook to add to")] string notebookId,
             [Description("Analysis question (e.g., 'ANALYZE: What are trends in customer satisfaction?')")] string analysisPrompt)
         {
@@ -159,7 +159,7 @@ namespace MCPServer.CSharp
         
         [McpServerTool, Description("Executes a cell and returns its results.")]
         public static async Task<string> ExecuteCell(
-            ViciNotebookService notebookService,
+            NotebookService notebookService,
             [Description("ID of the notebook containing the cell")] string notebookId,
             [Description("ID of the cell to execute")] string cellId)
         {
@@ -179,7 +179,7 @@ namespace MCPServer.CSharp
         
         [McpServerTool, Description("Gets AI-powered insights for a campaign.")]
         public static async Task<string> GetCampaignInsights(
-            ViciNotebookService notebookService,
+            NotebookService notebookService,
             [Description("ID of the campaign to analyze")] string campaignId,
             [Description("Optional specific aspect to analyze (e.g., 'agent performance', 'customer satisfaction')")] string aspect = "")
         {

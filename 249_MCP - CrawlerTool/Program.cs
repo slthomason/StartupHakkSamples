@@ -13,8 +13,9 @@ builder.Logging.AddConsole(consoleLogOptions =>
     consoleLogOptions.LogToStandardErrorThreshold = LogLevel.Trace;
 });
 
-// Register services
+// Register all services
 builder.Services.AddHttpClient();
+builder.Services.AddSingleton<CrawlerService>();
 
 builder.Services
     .AddMcpServer()

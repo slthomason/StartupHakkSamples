@@ -23,10 +23,10 @@ namespace MCPServer.CSharp
         public DateTime AnalyzedAt { get; set; } = DateTime.UtcNow;
     }
 
-    public class CleanRouterService
+    public class CrawlerService
     {
         private readonly HttpClient _httpClient;
-        private readonly ILogger<CleanRouterService> _logger;
+        private readonly ILogger<CrawlerService> _logger;
         
         // In-memory catalog (in production, this would be a database)
         private readonly Dictionary<string, WebsiteCategory> _websiteCatalog = new();
@@ -39,7 +39,7 @@ namespace MCPServer.CSharp
         private HashSet<string> _urlQueue = new HashSet<string>();
         private HashSet<string> _processedUrls = new HashSet<string>();
 
-        public CleanRouterService(IHttpClientFactory httpClientFactory, ILogger<CleanRouterService> logger)
+        public CrawlerService(IHttpClientFactory httpClientFactory, ILogger<CrawlerService> logger)
         {
             _httpClient = httpClientFactory.CreateClient();
             _logger = logger;
