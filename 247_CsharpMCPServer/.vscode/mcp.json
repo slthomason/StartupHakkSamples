@@ -1,0 +1,14 @@
+{
+    "inputs": [],
+    "servers": {
+        "MCPServer.CSharp": {
+            "type": "stdio",
+            "command": "dotnet",
+            "args": [
+                "run",
+                "--project",
+                "${workspaceFolder}/MCPServer.CSharp.csproj"
+            ]
+        }
+    }
+} 
