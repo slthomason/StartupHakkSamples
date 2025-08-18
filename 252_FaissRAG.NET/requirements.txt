@@ -1,0 +1,6 @@
+fastapi
+gunicorn
+uvicorn[standard]
+faiss-cpu
+numpy
+requests
